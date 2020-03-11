@@ -87,6 +87,7 @@ Todeszeitraum in Korrelation zu den Weltkriegen
 3 = vor dem Zweiten Weltkrieg verstorben 
 4 = während des Zweiten Weltkriegs verstorben
 5 = unabhängig des Zweiten Weltkriegs nach 1945 verstorben
+6 = lebt bis zur Erstellung dieses Netzwerks (2020)
 
 
 #### TYPE OF DEATH
