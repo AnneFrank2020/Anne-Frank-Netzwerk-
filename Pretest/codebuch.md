@@ -40,7 +40,7 @@ Definiert die Art der Beziehung bei multiplexen Netzwerken mit verschiedenen Bez
 
 #### KONFLIKTPOTENZIAL
 
-Definiert die Häufigkeit von Konfliketen und potentiellen Konflikten.
+Definiert die Häufigkeit von Konflikten und potentiellen Konflikten.
 
 1 = nie
 2 = sehr selten
