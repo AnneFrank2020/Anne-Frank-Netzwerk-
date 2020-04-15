@@ -52,10 +52,10 @@ Definiert die Häufigkeit von Konflikten und potentiellen Konflikten.
 Einteilung der Zeitabschnitte in normalisierten Werten
 
 1 = Frankfurt (Geburt Juni 1929 - Februar 1934) 
-2 = Amsterdam - Umzug ins Hinterhaus (XX 1934-1942 XX) 
-3 = Hinterhaus Teil 1 (1942 XX - 31. Dezember)
-4 = Hinterhaus Teil 2 (1943 Janaur - Dezember) 
-5 = Hinterhaus Teil 3 (1944 Janaur - XX Aufgeflogen) 
+2 = Amsterdam - Umzug ins Hinterhaus (Februar 1934 - Juni 1942) 
+3 = Hinterhaus Teil 1 (Juli 1942- Dezember 1942)
+4 = Hinterhaus Teil 2 (Januar 1943 - Dezember 1943) 
+5 = Hinterhaus Teil 3 (Januar 1944 - August 1944) 
 6 = Nach dem Krieg (Januar 1946)   
 7 = vor Annes Geburt (1929 und früher)
 
