@@ -118,3 +118,8 @@ Definiert den Typ des Knotens
 
 1 = Mensch
 2 = Gegenstand (Tagebuch)
+
+#### RESIDENT 
+
+1 = Hinterhausbewohner
+2 = Nicht Hinterhausbewohner
