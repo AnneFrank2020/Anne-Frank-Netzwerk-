@@ -126,7 +126,7 @@ Definiert die Bewohner des Hinterhaus
 1 = Hinterhausbewohner
 2 = kein Hinterhausbewohner
 
-### VERRÄTER
+#### VERRÄTER
 
 1 = potenzieller Verräter
 2 = kein potenzieller Verräter
