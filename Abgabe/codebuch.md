@@ -1,5 +1,5 @@
 # Datensatz Netzwerkanalyse Anne Frank #
-### Luisa, Celine, Kai, Julia, Sandra, Theresa  ###
+### Luisa Scheurer, Celine Bischoff, Kai Roos, Julia Gehringer, Sandra Belschner, Theresa Stumpf ###
 
 ## Inhalt
 - el.csv (Edgelist)
