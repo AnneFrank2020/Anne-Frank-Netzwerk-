@@ -24,9 +24,13 @@ codiert von 1 bis XX, jede ID entspricht einer Person bzw. einem Gegenstand.
 Ausprägung der Kantenstärke (Beziehungsstärke), definiert nach vorgegeben Skalen:
 
 1 = Neutral 
+
 2 = Gering (negative Emotionen)
+
 3 = Mittel (Freundschaftliche Beziehung)
+
 4 = Stark (starke Zuneigung)
+
 5 = Sehr stark (Liebe) 
 
 #### RELATIONSHIP 
@@ -114,13 +118,21 @@ Definiert die Todesursache.
 Definiert den Todesort
 
 1 = KZ Bergen-Belsen
+
 2 = Birsfelden
+
 3 = KZ Auschwitz-Birkenau
+
 4 = KZ Bergen-Belsen
+
 5 = Transport nach Theresienstadt
+
 6 = KZ Mauthausen
+
 7 = KZ Neuengamme
+
 8 = Anderer Todesort
+
 9 = Amsterdam
 
 #### TYPE
