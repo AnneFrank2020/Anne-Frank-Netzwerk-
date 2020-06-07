@@ -7,7 +7,7 @@
 - codebuch.md (Codierung der Datensätze)
 
 ## Ursprung und Datenerhebung
-Auf Grundlage des Anne Frank Tagebuchs, sowie weiterer Lektüre haben wir ein Netzwerk über Anne Franks Sozialbeziehungen erstellt. 
+Auf Grundlage des Anne Frank Tagebuchs, sowie weiterer Lektüre haben wir ein Netzwerk über Anne Franks Sozialbeziehungen im zeitlichen Verlauf erstellt.
 
 Unser Gesammtnetzwerk ist ein ungerichtetes two-mode Netzwerk, das durch weitere, gewichtete Teilnetzwerke ergänzt wird. 
 
@@ -17,7 +17,7 @@ Unser Gesammtnetzwerk ist ein ungerichtetes two-mode Netzwerk, das durch weitere
 ID  
 codiert von 1 bis XX, jede ID entspricht einer Person bzw. einem Gegenstand.
 
-#### Werte, die nicht verfügbar sind, werden mit "NA"gekennzeichnet 
+#### Werte, die nicht verfügbar sind, werden mit "99"gekennzeichnet 
 
 #### WEIGHT  
 
@@ -52,11 +52,17 @@ Definiert die Häufigkeit von Konflikten und potentiellen Konflikten.
 Einteilung der Zeitabschnitte in normalisierten Werten
 
 1 = Frankfurt (Geburt Juni 1929 - Februar 1934) 
+
 2 = Amsterdam - Umzug ins Hinterhaus (Februar 1934 - Juni 1942) 
+
 3 = Hinterhaus Teil 1 (Juli 1942- Dezember 1942)
+
 4 = Hinterhaus Teil 2 (Januar 1943 - Dezember 1943) 
+
 5 = Hinterhaus Teil 3 (Januar 1944 - August 1944) 
+
 6 = Nach dem Krieg (Januar 1946)   
+
 7 = vor Annes Geburt (1929 und früher)
 
 
@@ -83,10 +89,15 @@ Definiert die Religion der Akteure
 Todeszeitraum in Korrelation zu den Weltkriegen
 
 1 = vor dem Ersten Weltkrieg verstorben
+
 2 = während des Ersten Weltkriegs verstorben
+
 3 = vor dem Zweiten Weltkrieg verstorben 
+
 4 = während des Zweiten Weltkriegs verstorben
+
 5 = unabhängig des Zweiten Weltkriegs nach 1945 verstorben
+
 6 = lebt bis zur Erstellung dieses Netzwerks (2020)
 
 
