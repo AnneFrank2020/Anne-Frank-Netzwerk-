@@ -144,6 +144,7 @@ Definiert den Todesort.
 Definiert den Typ des Knotens.
 
 1 = Mensch
+
 2 = Gegenstand (Tagebuch)
 
 #### RESIDENT
@@ -151,9 +152,11 @@ Definiert den Typ des Knotens.
 Definiert die Bewohner des Hinterhaus.
 
 1 = Hinterhausbewohner
+
 2 = kein Hinterhausbewohner
 
 #### VERRÄTER
 
 1 = potenzieller Verräter
+
 2 = kein potenzieller Verräter
