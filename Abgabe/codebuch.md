@@ -53,7 +53,7 @@ Definiert die Häufigkeit von Konflikten und potentiellen Konflikten.
 
 #### TIME DEFINITION
 
-Einteilung der Zeitabschnitte in normalisierten Werten
+Einteilung der Zeitabschnitte in normalisierten Werten:
 
 1 = Frankfurt (Geburt Juni 1929 - Februar 1934) 
 
@@ -74,7 +74,7 @@ Einteilung der Zeitabschnitte in normalisierten Werten
   
 #### SEX  
 
-Gibt das Geschlecht an
+Gibt das Geschlecht an.
 
 1 = männlich
 2 = weiblich
@@ -83,14 +83,14 @@ Gibt das Geschlecht an
 
 #### RELIGION
 
-Definiert die Religion der Akteure 
+Definiert die Religion der Akteure. 
 1 = Jude
 2 = Christ
 3 = sonstiges 
 
 #### SURVIVAL
 
-Todeszeitraum in Korrelation zu den Weltkriegen
+Todeszeitraum in Korrelation zu den Weltkriegen:
 
 1 = vor dem Ersten Weltkrieg verstorben
 
@@ -108,14 +108,18 @@ Todeszeitraum in Korrelation zu den Weltkriegen
 #### TYPE OF DEATH
 
 Definiert die Todesursache.
+
 1 = Vergasung 
+
 2 = Fahrlässige Tötung im KZ 
+
 3 = Natürlicher Tod
+
 4 = überlebt
 
 #### PLACE OF DEATH
 
-Definiert den Todesort
+Definiert den Todesort.
 
 1 = KZ Bergen-Belsen
 
@@ -137,14 +141,14 @@ Definiert den Todesort
 
 #### TYPE
 
-Definiert den Typ des Knotens
+Definiert den Typ des Knotens.
 
 1 = Mensch
 2 = Gegenstand (Tagebuch)
 
 #### RESIDENT
 
-Definiert die Bewohner des Hinterhaus
+Definiert die Bewohner des Hinterhaus.
 
 1 = Hinterhausbewohner
 2 = kein Hinterhausbewohner
