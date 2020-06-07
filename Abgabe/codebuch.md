@@ -105,7 +105,7 @@ Definiert den Todesort
 1 = KZ Bergen-Belsen
 2 = Birsfelden
 3 = KZ Auschwitz-Birkenau
-4 = KZ Auschwitz-Birkenau
+4 = KZ Bergen-Belsen
 5 = Transport nach Theresienstadt
 6 = KZ Mauthausen
 7 = KZ Neuengamme
