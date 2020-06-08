@@ -127,8 +127,6 @@ Definiert den Todesort.
 
 3 = KZ Auschwitz-Birkenau
 
-4 = KZ Bergen-Belsen
-
 5 = Transport nach Theresienstadt
 
 6 = KZ Mauthausen
