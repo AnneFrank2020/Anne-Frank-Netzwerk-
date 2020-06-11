@@ -41,6 +41,7 @@ Definiert die Art der Beziehung bei multiplexen Netzwerken mit verschiedenen Bez
 2 = Kontakt
 3 = Freundschaft
 4 = Helfer
+5 = Kontakt zu Verrätern
 
 #### KONFLIKTPOTENZIAL
 
