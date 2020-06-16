@@ -97,7 +97,7 @@ Todeszeitraum in Korrelation zu den Weltkriegen:
 
 2 = während des Ersten Weltkriegs verstorben
 
-3 = vor dem Zweiten Weltkrieg verstorben 
+3 = gestorben zwischen dem Ende des 1. Weltkrieg und Anfang 2. Weltkrieg 
 
 4 = während des Zweiten Weltkriegs verstorben
 
