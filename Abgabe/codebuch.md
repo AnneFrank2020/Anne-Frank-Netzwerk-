@@ -15,7 +15,7 @@ Unser Gesammtnetzwerk ist ein ungerichtetes two-mode Netzwerk, das durch weitere
 ## EDGE-Attribute 
 
 ID  
-codiert von 1 bis XX, jede ID entspricht einer Person bzw. einem Gegenstand.
+Jede ID entspricht einer Person bzw. einem Gegenstand.
 
 #### Werte, die nicht verfügbar sind, werden mit "99"gekennzeichnet 
 
