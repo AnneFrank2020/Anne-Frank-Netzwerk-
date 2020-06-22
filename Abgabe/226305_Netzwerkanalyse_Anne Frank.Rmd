@@ -1,0 +1,1596 @@
+---
+title: "226305 Forschungsbericht Netzwerkanalyse Anne Frank"
+author: "Julia Gehringer, Kai Roos, Theresa Stumpf, Celine Bischoff, Luisa Scheurer, Sandra Belschner"
+date: "Sommersemester 2020"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: 3
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  word_document:
+    toc: yes
+    toc_depth: '3'
+subtitle: Analyse des Beziehungsnetzwerks um Anne Frank
+---
+
+__Abstract und Keywords__
+Das Ziel des vorliegenden Forschungsberichts ist es, durch die Darstellung und Analyse von verschiedenen Beziehungsnetzwerken die Auswirkungen auf die sozialen Kontakte von Anne Frank zu untersuchen. Dazu wurden Informationen über ihr soziales Umfeld aus Primär- und Sekundärquellen zusammengetragen und anschließend ausgewertet. Bei diesem Verfahren wurde eine Gliederung in verschiedene Zeitabschnitte vorgenommen, wodurch ein direkter Vergleich ihrer Bezugspersonen möglich gemacht wurde. Die Ergebnisse bestätigten die Annahme, dass sich die sozialen Kontakte von Anne Frank während ihrer Zeit im Hinterhaus stark reduzierten. Darüber hinaus wurde eine Broker-Funktion von Otto Frank, dem Vater von Anne Frank, ermittelt, die für das Untertauchen im Hinterhaus und den weiteren Verlauf eine zentrale Bedeutung hatte.
+
+Keywords: Netzwerkanalyse, Teilnetzwerke, soziales Umfeld, Bezugspersonen, Anne Frank, Nationalsozialismus
+
+
+In dieser Arbeit wird aus Gründen der besseren Lesbarkeit das generische Maskulinum verwendet. 
+
+
+# Einleitung
+Anne Frank war Jüdin und wurde 1929 in Frankfurt am Main geboren.
+Als Adolf Hitler 1933 zum Reichskanzler ernannt wurde und die NSDAP an die Macht gelangte, floh Anne gemeinsam mit ihrem Vater Otto Frank, ihrer Mutter Edith Frank und ihrer Schwester Margot Frank in die Niederlande. Anne hatte zu dieser Zeit viele Freunde und soziale Kontakte.
+ 
+Mit dem Einmarsch deutscher Truppen in die Niederlande 1940 beschloss Otto Frank seine Familie in dem Hinterhaus unterzubringen, welches an sein Geschäft angrenzte.
+ 
+Gemeinsam mit vier anderen jüdischen Mitbewohnern versteckte sich die Familie Frank dort ab Juli 1942 über zwei Jahre lang. Bis auf sechs Helfer wusste niemand von dem Versteck. Außerdem gibt es mögliche Verräter, die von dem Versteck im Hinterhaus gewusst haben könnten. 
+Anne dokumentierte diese Zeit in einem Tagebuch und schrieb darin ihre Gedanken und Ängste auf. Am 4. August 1944 wurden die Bewohner des Hinterhauses entdeckt und anschließend in unterschiedliche Konzentrationslager deportiert – nur Otto Frank überlebte den Holocaust.
+ 
+Das Tagebuch der Anne Frank ist wohl eines der bekanntesten schriftlichen Dokumente aus der Zeit des Nationalsozialismus. Aufgrund dieser Popularität wollten wir das Leben der Anne Frank auf einer tieferen Ebene analysieren und interpretieren. Dabei wurden die Informationen aus dem Tagebuch als Primärquelle mit Informationen aus weiteren Sekundärquellen ergänzt und vervollständigt.
+ 
+Eines der Ziele war es, potenzielle Verräter zu benennen und diese mit Anne Frank in Verbindung zu setzen. Zu dieser Thematik gibt es zwar bereits einige Nachforschungen, jedoch konnten in der Vergangenheit keine genaueren Aussagen darüber getroffen werden, ob und wer Anne Frank tatsächlich verraten haben könnte. Da es bisher ebenfalls keine genaueren Nachforschungen und Analysen zu dem Sozialleben im Hinterhaus und dem sozialen Umfeld gibt, interessierte uns besonders der Einfluss, den der Aufenthalt im Hinterhaus auf Anne Frank hatte. Daraus entwickelten wir folgende Forschungsfrage, auf welcher dieser Forschungsbericht basiert:
+
+„Inwieweit hat sich das soziale Umfeld sowie die Beziehungen zu den Mitmenschen von Anne Frank durch das Leben im Hinterhaus von Juli 1942 bis August 1944 verändert?“
+
+
+# Vorarbeiten und vergleichbare Studien
+## Aktueller Forschungsstand
+Das Forschungsdesign lehnt sich an die wachsende Bedeutung der Netzwerkforschung innerhalb der Geschichtswissenschaften an, um historische Hintergründe und Prozesse zu rekonstruieren (vgl. Düring & von Keyserlingk, 2015, S. 338f.). Die Harvard University widmet derzeit einen Teil ihrer Forschung der Visualisierung unterschiedlicher historischer Netzwerke (vgl. Center of History and Economics, 2020). Als besonders interessant stellt sich hierfür die Zeit des Zweiten Weltkriegs und des Nationalsozialismus heraus. Marten Düring (2015) erforschte mehrere verdeckte soziale Netzwerke im Nationalsozialismus und spezialisierte sich dabei besonders auf die Erstellung verschiedener Helfernetzwerke. 
+
+Weitere Forschungen existieren außerdem zu Verfolgungsnetzwerken im Rahmen des Holocausts (vgl. Seibel & Raab, 2003), sowie zu Netzwerken des Widerstandes um Stauffenberg (vgl. Keyserlingk-Rehbein, 2018). Auch neuere Studien wie die des Instituts für interdisziplinäre Konflikt- und Gewaltforschung der Universität Bielefeld beschäftigten sich mittels Befragungen zu Opfer- und Helferschaften der deutschen Bevölkerung in der NS-Zeit (vgl. Institut für Interdisziplinäre Konflikt- und Gewaltforschung, 2019). Obwohl die Forschungsdisziplin von Netzwerkanalysen in den Geschichtswissenschaft noch recht jung ist, besteht eine Vielzahl von historischen Publikationen. Trotzdem wurde das Schicksal der Anne Frank bislang in keiner Netzwerkanalyse thematisiert und aufgearbeitet. Es existiert allerdings eine Vielzahl von Publikationen und Forschungen von verschiedenen Autoren und Zeitzeugen zu Anne Franks Geschichte. Vor allem das Anne Frank Haus in Amsterdam hat sich der Erforschung von Annes Leben in ihrem Wissenszentrum zur Aufgabe gemacht. Das Museum kooperiert mit unterschiedlichen internationalen Partnern, um weitere Erkenntnisse über die Geschichten der Hinterhausbewohner in Erfahrung zu bringen. Unter anderem mit dem United States Holocaust Memorial Museum, sowie der New York Pace University. Besonders interessant für den vorliegenden Forschungsbericht erweisen sich die Nachforschungen (Cold Case Diary, o. J.) von Vince Pankoke, einem ehemaligen FBI Agenten und seinem Team. Im Rahmen der laufenden Studie “Cold Case Diary” versucht die Gruppe, das bisher ungelöste Rätsel um die Aufdeckung des Hinterhauses zu lösen.
+
+Trotz hoher historischer Relevanz und einer Vielzahl von geschichtswissenschaftlichen Quellen über die Thematik, konnte keine Netzwerkstudie über Anne Franks Geschichte gefunden werden. Daher besteht in diesem Bereich eine Forschungslücke, die unsere Forschungsarbeit legitimiert.
+
+ 
+## Arbeitshypothesen
+Ausgehend von der Analyse des Forschungsstand und der weiterführenden Literaturrecherche rund um den untersuchten Gegenstand lassen sich für diese Netzwerkanalyse folgende Arbeitshypothesen definieren: 
+
+a) Das soziale Umfeld von Anne Frank minimierte sich durch den Aufenthalt im Hinterhaus. 
+
+b) Es ist davon auszugehen, dass die anderen Hinterhausbewohner bzw. Helfer bereits vor der Zeit im Hinterhaus eine enge Beziehung zu der Familie Frank hatten. Durch diese enge Verbindung wurde das Untertauchen der Hinterhausbewohner überhaupt erst möglich.
+
+c) Anne Frank baute innerhalb der Zeit im Hinterhaus starke Verbindungen zu den ihr zuvor unbekannten Mitbewohnern und Helfern auf. 
+
+d) Die familiären Beziehungen verbesserten beziehungsweise verschlechterten sich durch die Zeit im Hinterhaus geschuldet durch die Minimierung der sozialen Kontakte
+
+e) Es braucht ein großes Netzwerk, um eine Personengruppe von acht Menschen zu verstecken, da ein hohes Maß an Organisation dafür notwendig ist. 
+
+f) Anne Frank wurde verraten/ist durch Zufall entdeckt worden. 
+
+g) Das Konfliktpotenzial erhöht sich aufgrund der räumlichen Einschränkungen im Hinterhaus. 
+
+
+# Datenerhebung: Zugang, Bereinigung und Codebuch
+Für die Datenerhebung wurde ausreichend Zeit eingeplant und beschlossen, die Recherchephase über die Weihnachtsferien bis in den Januar hinein zu setzen. Grundlage für die Recherche stellte das Tagebuch der Anne Frank dar, das jedes Teammitglied über die Weihnachtsferien gelesen hatte. Daneben besuchte das Team im Zuge einer Foschungsexkursion das Anne Frank Haus in Amsterdam. So wurde am Anfang des Projekts sichergestellt, dass jedes Teammitglied über einen ähnlichen Wissensstand verfügte und legten damit eine Basis, auf die wir dann mit der intensivieren Recherche aufbauen konnten. 
+Um möglichst schnell und effizient arbeiten zu können, wurde die Recherchephase in unterschiedliche Arbeitspakete aufgeteilt. Jedes Arbeitspaket beschreibt einen Zeitabschnitt, den wir innerhalb des Codebuchs als Team festgesetzt hatten. Luisa Scheurer, Celine Bischoff, Kai Roos und Theresa Stumpf beschäftigten sich mit der Literaturrecherche sowie der Datenerhebung. Julia Gehringer und Sandra Belschner beschäftigten sich anschließend mit der Datenbereinigung und der Visualisierung durch RStudio. Aus den Erzählungen der Anne Frank haben sich klare Beziehungsstrukturen herauskristallisiert, die wir anschließend auf Basis der Edge und Nodeliste via R visualisieren konnten. Uns ist wichtig, die Veränderung der sozialen Kontakte von Anne Frank gegenüber ihren Mitmenschen genau aufzuzeigen. Gerade im Hinterhaus wurde das sehr deutlich.
+
+Grundlage für eine ordentliche Recherche war das Codebuch, da somit genau festgelegt wurde, worauf bei der Analyse der Literatur geachtet werden muss. Es definiert sich durch unterschiedliche Edge- und Node-Attribute, die wir vor der Analyse eindeutig bestimmen mussten, um eine Einheitlichkeit in der Datenerhebung bei allen gewährleisten zu können. Das Codebuch enthält durch unterschiedliche Attribute verschiedene Ziele, die wir durch unsere Untersuchung erreichen möchten. Viele Personen wurden aus Personenschutzgründen in der Literatur mit anderen Initialkürzeln beschrieben. Das betrifft vor allem die Zeit vor dem Hinterhaus in der Schule. Das brachte einen erhöhten Arbeits- und Rechercheaufwand mit sich, da viel Zeit dafür verwendet werden musste, die gesamte Schulklasse von Anne Frank zu rekonstruieren. Durch Augenzeugenberichten und Erzählungen anderer Klassenkameraden, die den Krieg überlebt hatten, gelang uns das. Bei einigen Personen in Annes Umfeld gestaltete es sich sehr schwer, an Informationen zu gelangen, da unklar war, ob und wann diese Menschen gestorben waren.
+
+Einige Beziehungsmuster mussten im Vorhinein mit der gesamten Gruppe besprochen werden, da sonst die Gefahr von Datenverfälschung zu groß gewesen wäre. Das betrifft beispielsweise das Attribut „Liebe“ zueinander. Selbstverständlich liebt die Mutter von Anne Frank ihre beiden Kinder, wir mussten aber definieren, dass das eine andere Beziehungsform von Liebe ist als zwischen Eheleuten.
+
+Anlass dafür hat uns die Veränderung des Beziehungsverhältnisses von Anne Frank zu Peter van Pels gegeben. Wir wollten diese Veränderung möglichst klar aufzeigen und nicht mit einem Eltern-Kind Verhältnis gleichsetzen. Durch die Relationship definierten wir die Art der Beziehung mit verschiedenen Beziehungsarten. 
+
+Ein weiteres Attribut stellt das Konfliktpotenzial dar, welches die Häufigkeit von Konflikten beziehungsweise auch potentiellen Konflikte beschreibt. Gerade in der Zeit des Hinterhauses wurden wir durch das Tagebuch auf unterschiedliche Spannungsfelder unter den Hausbewohnern aufmerksam. Uns eine Wissensgrundlage vor der Codebuch Definition anzueignen, erwies sich also als richtige Entscheidung, da wir mit Sicherheit erst spät während der Recherchephase dieses Attribut definiert hätten.
+
+Um eine geordnete Phase der Analyse sicherzustellen, gliederten wir das Leben der Anne Frank in insgesamt sechs, später sieben Teilbereiche auf – unsere Arbeitspakete. Hierbei entwickelte sich im Laufe der Datenerhebung ein zusätzliches Problem, das mit der bisherigen Zeiteinteilung nicht kompatibel war. Der erste Zeitabschnitt in sechs Schritten begann erst mit der Geburt von Anne Frank. Allerdings gab es bereits Personen im Familienkreis, die vorab im Netzwerk auftauchen. Es musste abgewogen werden, inwiefern diese Akteure in das Netzwerk miteinbezogen werden. Da einige Personen dahingehend wichtig waren, dass ihre Nachfahren in engen Kontakt zu Anne Frank standen und uns die Vollständigkeit sehr wichtig war, wurde ein extra Zeitabschnitt definiert. Mit dem Zeitabschnitt sieben konnten damit auch Akteure vor Anne Franks Geburt aufgenommen werden. Jede Zahl unter dem Attribut Time Definition von eins bis sieben definierte einen eindeutigen Zeitabschnitt. Durch das Attribut Religion bestimmten wir den Glauben der Akteure und auch den Todeszeitraum in Korrelation zu den Weltkriegen. Durch das Attribut Sex bestimmten wir das Geschlecht der Personen. Zusätzlich führten wir das Geschlecht Neutrum ein, da das Tagebuch sowie die Einbrecher Teil der Datenerhebung sind, aber keinem eindeutigen Geschlecht zuzuordnen waren. Wir wollten in der Datenerhebung auch herausfinden und analysieren, wie die Personen verstorben sind. Das definierten wir durch das Attribut Type of Death.
+
+Daneben war auch der Todesort für uns interessant in der Analysephase. Dieses Attribut erhoben wir durch Place of Death mit dem Hintergedanken, eine Grafik zu erstellen, welches die Deportationsorte der verstorbenen Personen aus dem Hinterhaus markierte. Gerade in Hinblick auf unseren Edit Artikel machten wir uns dort bereits intensive Gedanken darüber, was den Leser unserer Netzwerkanalyse in Form eines journalistischen Artikels interessieren könnte. Zu guter Letzt war uns auch die Definition des Knotens innerhalb der Node-Attribute wichtig. Diese gliederten wir in Mensch und Gegenstand (Tagebuch).
+
+Grundlage der Recherchephase war das Tagebuch der Anne Frank. Gerade aber in der Zeit vor dem Hinterhaus mussten wir auch auf weiterführende Literatur zurückgreifen. Beispielsweise diente das Tagebuch im ersten Zeitabschnitt vielmehr nur als sekundäre Informationsquelle, da Anne Frank ihr Tagebuch nicht schon seit ihrer Geburt geführt hatte. Primärquellen waren hier vor allem verschiedenen Biografien. 
+
+Spätestens als Anne Frank nach Amsterdam gezogen war, diente uns das Tagebuch als Primärquelle zu vielen entscheidenden Erkenntnissen über die Beziehungsverhältnisse. Als Abgleich mancher Beziehungen hat uns zusätzlich die aktuelle Verfilmung des Tagebuchs sehr geholfen, da manche Beziehungsmuster nicht eindeutig aus dem Tagebuch hervorgingen. Das bezieht sich vor allem auf die Verhältnisse zu den Helfenden, die eher weniger Beachtung im Tagebuch in den ersten zwei Jahren im Hinterhaus erhielten.
+
+Umso wichtiger war dort auch die gegenseitige Absprache, da sich das Beziehungsverhältnis von Anne gegenüber den Helfern auch im letzten Jahr nicht wirklich verändert hatte. Für solche Beziehungen haben wir einen einheitlichen Wert definiert, der über die drei Jahre im Hinterhaus konstant blieb. Eine willkürliche Interpretation von Beziehungsveränderung, inwiefern sich die Verhältnisse von den Helfenden zu den Bewohnern im Hinterhaus über die drei Jahre verändert hatte, ohne jede eindeutige Informationsgrundlage, wäre hier völlig fehl am Platz gewesen. Zu diesen Beziehungsverhältnissen gibt es kaum Informationen, dadurch haben wir sie neutral einmal anfangs definiert. Selbstverständlich spielt die eigene individuelle Intuition eine sehr große Rolle bei der Definition der Beziehungsverhältnisse. Das kann zum Problem werden, wenn zu viel unsererseits interpretiert wird. Hier haben wir versucht mit einem möglichst neutralen Blick die Beziehungsmuster zu erstellen, auch wenn das häufige Absprachen zwischen uns abverlangte. Wir mussten die Ergebnisse häufig miteinander vergleichen und uns zu Konstanten (Beziehungsverhältnis Kinder/Helfer) genauestens im Vorhinein und zwischendurch absprechen, um eine Einheitlichkeit zu gewährleisten.
+
+Auch die Internetseite des Anne-Frank-Haus, sowie die Webseite des Jüdischen Museums in Frankfurt, wurden zur Datengewinnung und vor allem zum Datenabgleich mit anderen Quellen herangezogen. Der Fokus lag aber in jedem Arbeitspaket auf den Erkenntnissen der Literatur. Informationen aus dem Internet wurden nur als Bestätigung der Daten herangezogen.
+
+Die Datenbereinigung durch Julia Gehringer und Sandra Belschner im Februar und März stellt nach der Datenerhebung ebenfalls eine sehr zeitintensive Arbeit innerhalb unserer Netzwerkanalyse dar. Problematisch war die teilweise doppelte Vergabe von IDs für unterschiedliche Personen, aber auch das unbeabsichtigte setzen von Leerzeichen, welche unsere Listen nicht einlesbar machten. Die Listen mussten zudem geordnet und bereinigt werden. In der Edgeliste waren Personen, die durch eine unterschiedliche ID-Vergabe nicht in der Nodeliste gelistet waren, deshalb konnte die Liste auch nicht eingelesen werden. Die ID-Vergabe musste im Zuge der Bereinigung nochmals angepasst werden. Selbstredend hat es einige Zeit in Anspruch genommen, sich in das Programm RStudio einzuarbeiten, um den Großteil aller Funktionen überhaupt nutzen zu können. Dennoch gestaltete sich auch dieser Prozess als durchwegs geordnet, da wir uns regelmäßig absprachen und genügend Zeit für die zeitintensive Datenbereinigung im Vorhinein eingeplant hatten.
+
+
+# Analyse und Interpretation
+
+## Das Gesamtnetzwerk
+
+Das Gesamtnetzwerk umfasst 81 Knoten und 941 Beziehungen. Es ist ungerichtet und ungewichtet.
+
+Basierend auf unserer Datenerhebung konnten wir insgesamt 24 Netzwerke visualisieren. Durch konstruktive Diskussionen einigte man sich schlussendlich auf zwölf Netzwerke, die durch unterschiedliche Netzwerkmaße interpretiert werden können. Die zwölf Netzwerke bestehen teilweise aus unterschiedlichen Zeitabschnitten. Die Daten des Gesamtnetzwerkes stellen Im Folgenden eine Wissensgrundlage für die darauffolgende Interpretation des Clusternetzwerks und der Interpretation der Teilnetzwerke dar.
+Edges beschreiben die Beziehungsverhältnisse zwischen zwei Akteuren, auch Kanten genannt, im Netzwerk genauer (vgl. Baur, 2014). Jedem Akteur hat das Team ein bestimmtes ID Kürzel vergeben. Auch das Tagebuch “Kitty” wurde durch eine eigene ID gekennzeichnet. Es stellt zwar keine Person dar, war aber dennoch ein wichtiger Gegenstand im Leben der Anne Frank. Dabei erhoben wir das Tagebuch nicht als Person, sondern als Gegenstand.  Aufgrund dessen handelt es sich bei unserem Gesamtnetzwerk um ein Two-Mode Netzwerk. Werte, die nicht zugänglich waren, kennzeichneten wir durch „99“. 
+
+*Vertex-Attribute*
+- Name
+- Sex
+- Religion
+- Survival
+- Type of Death
+- Place of Death
+- Type
+- Resident
+- Verräter
+
+*Edge-Attribute*
+- Weight
+- Relationship
+- Konfliktpotenzial
+- Time Definition
+
+```{r Pakete installieren}
+
+library(igraph) #Um die Netzwerke darzustellen
+library(igraphdata) #Um Daten auslesen zu können
+library(knitr) 
+library(rmarkdown) 
+library(graphlayouts)
+library(dplyr)
+
+```
+
+
+```{r Hochladen der Edge- und Nodelist aus dem Github Verzeichnis}
+
+#Daten aus der Edgelist laden
+edges <- read.csv("https://raw.githubusercontent.com/AnneFrank2020/Anne_Frank_Netzwerk/master/Abgabe/edgelist.csv", header=T, as.is=T)
+
+#Daten aus der Nodelist laden
+nodes <- read.csv("https://raw.githubusercontent.com/AnneFrank2020/Anne_Frank_Netzwerk/master/Abgabe/nodelist.csv", header=T, as.is=T)
+
+#Matrix erstellen aus Fusion der Edge- und Nodelist
+edgematrix <-as.matrix(edges)
+af <- graph_from_data_frame(d=edgematrix, vertices=nodes, directed=FALSE)
+af
+
+```
+
+
+```{r Gesamtnetzwerk mit einer Edge zwischen den Nodes}
+
+#Wir haben sieben verschiedene Zeitabschnitte erhoben, wollen aber in diesem Schritt im Gesamtnetzwerk nur eine Verbindung sichtbar machen
+
+# Anzeige der möglichen Attribute in igraph
+?igraph.plotting
+
+af_time <- delete.edges(af,  E(af)[which_multiple(af, eids = E(af))]) #lässt nur eine Verbindung pro Knoten anzeigen
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(af_time)[V(af_time)$type == 1]$shape <- "circle"
+V(af_time)[V(af_time)$type == 2]$shape <- "square"
+
+# Veränderung der Füllfarbe des Vertex
+V(af_time)$color <- "darkred"
+
+# blendet den Rahmen um den Vertex aus.
+V(af_time)$frame.color <- "NA" 
+
+```
+
+### Netzwerkmaße im Gesamtnetzwerk
+
+```{r Netzwerkmaße des Gesamtnetzwerk}
+
+# Parameter zu Beschreibung des Netzwerks
+
+## Knotenanzahl der Religionen
+
+jude <- V(af_time)[V(af_time)$religion == "1"]
+jude
+
+nicht_jude <- V(af_time)[V(af_time)$religion == "2"]
+nicht_jude
+
+## Knotenanzahl nach Geschlecht
+
+sex1 <- V(af_time)[V(af_time)$sex == "1"]
+sex1
+
+sex2<- V(af_time)[V(af_time)$sex == "2"]
+sex2
+
+sex99<- V(af_time)[V(af_time)$sex == "99"]
+sex99
+
+
+## Dichte des Netzwerks
+edge_density(af_time, loops=FALSE)
+
+
+## Längste Pfaddistanz
+farthest_vertices(af_time)
+
+## Kürzester Pfad
+get.diameter(af_time)
+
+##Closeness
+closeness_gesamt <- closeness(af_time)
+
+```
+
+### Visualisierung Gesamtnetzwerk nach Religionen
+
+```{r Gesamtnetzwerk nach Religionen, fig.height=12, fig.width=16}
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(af_time)[V(af_time)$type == 1]$shape <- "circle"
+V(af_time)[V(af_time)$type == 2]$shape <- "square"
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+plot( 
+  af_time,
+  asp = 0,
+  #Gibt an, in welchem Seitenverhältnis das Netzwerk geplottet werden soll
+  rescale = TRUE,
+  #Gibt an ob der Plot neu skaliert werden soll
+  layout = layout_nicely,
+  #Gibt an, mit welchem Algorithmus das Netzwerk berechnet werden soll
+  edge.curved = .15,
+  #Gibt die Krümmung der Kanten an
+  vertex.size = 3.5,
+  #Gibt die Knotengröße an
+  vertex.frame.color = NA,
+  #Gibt die Rahmenfarbe an
+  main = "Gesamtnetzwerk Anne Frank \n Nach Religionen",
+  sub = "gelb = Juden, blau = Christen, rot = keine Angabe",
+  #Gibt die Überschrift an
+  vertex.label.dist = 0.6,
+  #Gibt die Distanz zwischen dem Knotenmittelpunkt und dem label an
+  edge.lty = 1, 
+  #Gibt an, welche Darstellungsform eine Kante haben soll. 0=Leer, 1=normal, 2=gestrichelt, 3=gepunket, 4=Punktstrich
+  vertex.label.family = "Helvetica",
+  #Gibt die Schriftart an
+  vertex.label.color = "black",
+  #Gibt die Schriftfarbe an
+  vertex.label.font = 1,
+  #Gibt die Schriftgröße an
+  vertex.label.degree = pi/2,
+  #Gibt an, wo die Schrift stehen soll (pi ist link | pi/2 unten | -pi/2 oben | -pi/4 rechts)
+  edge.color = gray(0.6, alpha=0.9) #alpha ist Transparenz gray gibt an von 0 (weiß) bis 1 (schwarz)
+)
+
+```
+
+Verteilt auf alle Zeitabschnitte verfügt das Gesamtnetzwerk über 81 Knoten, bzw. Akteure, und 941 Kanten, also Verbindungen (vgl. Baur, 2014), untereinander. Der jüdische Glaubensanteil überwiegt im Gesamtnetzwerk eindeutig mit 56 jüdischen gegenüber zwölf christlichen Personen. Die Dominanz der jüdischen Akteure macht sich nicht nur rechnerisch bemerkbar, sondern auch grafisch. Die Farbe Blau symbolisiert Akteure christlichen Glaubens, gelb steht für Akteure jüdischen Glaubens und rot werden Akteure dargestellt, bei denen auch innerhalb der Recherche keine eindeutige Religion bestimmt werden konnte. Da auch die Familie Frank jüdisch war, ergibt es an dieser Stelle Sinn auf den Wert der Homophilie näher einzugehen. Er beschreibt die Tendenz zur Bildung von sozialen Beziehungen zwischen unterschiedlichen Akteuren mit ähnlichen Einstellungen, Meinungen oder Wertevorstellungen (vgl. Frieling und Froehlich, 2018). Versucht man das Netzwerk grafisch zu interpretieren, fällt sofort auf, dass die Homophilie gerade im direkten Umfeld von Anne Frank auftritt. Das trifft beispielsweise auf ihre Schulklasse zu, in der alle Klassenkameraden jüdischen Glaubens sind. Sie sind also nicht nur durch die Schule verbunden, sondern auch durch ethnische Merkmale. 
+
+Das Gesamtnetzwerk besteht aus 46 männlichen und 32 weiblichen Akteuren. Drei Akteuren konnte kein Geschlecht zugewiesen werden. Das betrifft sowohl das Tagebuch der Anne Frank als auch die beiden Einbrecher, die während der Zeit im Hinterhaus in das Lager eingedrungen sind. Jedoch wurden sie nie gefasst, weshalb ihre Identität auch nach ausgiebiger Recherche unklar ist. In dem Gesamtnetzwerk überwiegen dementsprechend die männlichen Akteure deutlich. 
+
+Grafisch fällt auch auf, dass im Gesamtnetzwerk zwei Knoten isoliert dargestellt werden. Sie haben also keinerlei Verbindungen zu allen anderen Akteuren. Das betrifft die Akteure Ans van Dijk und auch den ersten Einbrecher. 
+Die Pfaddistanz beschreibt die Anzahl der Akteure, über die alle Knoten im Netzwerk miteinander verbunden sind (vgl. Recke, 2011). Die größte Distanz im Netzwerk beträgt 12 Schritte zwischen den Akteuren Bettina Holländer und Lena Hartog, was im Vergleich zu den Beispielen aus der Vorlesung eher als geringer Wert auffällt. Die geringste Pfaddistanz geht über die sechs Akteure Bettina Holländer, Edith Frank, Peter van Pels, Miep Gies, Lammert Hartog und Lena Hartog. Dieses Ergebnis lässt sich mit dem Dokumentarfilm „Connected: The Power of Six Degrees“ (vgl. Annamaria Talas, 2008) in Verbindung bringen. Der Film beschreibt die Tatsache, dass ein Informationsaustausch um die ganze Welt nur mit sechs Akteuren realisierbar ist. Dieses Phänomen wird auch Six Degrees of Separation genannt (vgl. Buchanan, 2002) oder auch Kleine-Welt -Phänomen (vgl. Clement und Schreiber, 2013). Der kürzeste Weg durch das gesamte Netzwerk führt also über diese oben genannten sechs Akteure. 
+
+Berechnungen haben ergeben, dass im Gesamtnetzwerk eine Dichte von 21,7 Prozent unter den Akteuren vorliegt. Die Dichte beschreibt die Anzahl der Verbindungen, die unter allen möglichen Verbindungen angesprochen werden (vgl. Baur, 2014). Der Dichte-Wert scheint auf den ersten Blick nicht besonders hoch. Dies ist der hohe Gesamtzahl aller Akteure und der Tatsache, dass viele dieser Akteure nicht miteinander verbunden sind, geschuldet. Der Dichte-Wert wird allerdings in der Analyse der Teilnetzwerke, beispielsweise bei der Analyse der Hinterhausbewohner, deutlich aussagekräftiger.
+
+
+## Edge-Betweenness-Cluster-Netzwerk
+
+
+```{r Clusterberechnung nach Betweenness, fig.height=13, fig.width=16}
+
+# Clusterberechnung
+plot(af_time, vertex.color="grey80", main="Komponente 1")
+
+#Isolates ausblenden
+af_time_isolate <- delete.vertices(af_time, degree(af_time) == 0)
+
+# Berechnung der Cluster innerhalb der Komponente
+?cluster_edge_betweenness()
+
+# erstellt die Berechnung für die Modularität und deren Teilgruppen
+eb <- cluster_edge_betweenness(af_time_isolate)
+eb
+
+plot(
+  eb, af_time_isolate, 
+  main="Edge-Betweenness Cluster",
+  asp = 0,
+  rescale = TRUE,
+  edge.curved = .20,
+  vertex.size = 5.0,
+  main = "Gesamtnetzwerk Anne Frank",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+)
+
+```
+
+Das zweite Netzwerk, das in dieser Arbeit betrachtet wird, ist ein Cluster-Netzwerk mit den Knoten des Gesamtnetzwerks. Akteure, die keinerlei Verbindungen zu anderen Knoten aufwiesen, wurden an dieser Stelle nicht betrachtet, da diese für die Aussage des Netzwerks keine Rolle spielen. Das Netzwerk ergibt sich aus der Berechnung der Betweenness. Dieser Wert zeigt die Anzahl aller kürzesten Verbindungen zwischen allen Akteuren, die durch den Knoten Ego gehen (vgl. Fuhse 2018: 60). Um ein Edge-Betweenness-Cluster zu berechnen, fokussiert man sich dabei auf Gruppierungen von Knoten mit einer hohen Dichte an Kanten untereinander. Aus den unterschiedlichen Dichtewerten und der Gruppierung verschiedener Komponenten lassen sich so Cluster berechnen. Diese Cluster sind als Gemeinschaften und eng miteinander vernetzte Akteursstrukturen zu sehen, die eine Clique bilden können. Eine solche Clique besteht dabei aus mindestens drei Knoten, die alle miteinander vernetzt sind (vgl. Fuhse 2018: 75). Die Cliquen- beziehungsweise Clusteranalyse liefert Aussagen über lokale Strukturen in Netzwerken (vgl. Fuhse 2018: 76). So können im vorliegenden Forschungsbericht ebenfalls Aussagen und Rückschlüsse über die sozialen Strukturen und Umfelder in Anne Franks Leben getroffen werden. 
+
+In diesem Netzwerk lassen sich unterschiedliche Bezugsgruppen von Anne Frank definieren: ihre Familie, Schulfreunde, die Hinterhausbewohner und Helfer und einzelne Personengruppen, die insbesondere während der Zeit im Hinterhaus ihr soziales Umfeld prägten. Ein Grund für diese Netzwerkbildung lässt sich mit dem Begriff des „Aktivitäts-Foki“ definieren. Dieser besagt, dass beispielsweise ein bestimmter Ort die Wahrscheinlichkeit einer gegenseitigen Beziehungsbildung erhöht (vgl. (Hollstein & Straus, 2006, S. 468). Als zentraler Aspekt innerhalb Anne Franks sozialer Umwelt lässt sich zum Beispiel ihre Schule nennen. Dieser Ort definiert für sie einen zentralen Foki, da er die Verbindung zu ihren Freunden erst ermöglicht. Geprägt ist diese Beziehung ebenfalls durch die geteilte Religion des Judentums. Das rote und zugleich größte Cluster zeigt Annes Klassenkameraden aus dem Jüdischen Lyzeum. In diesem Cluster befinden sich neben Annes Klassenkameraden ebenfalls die Lehrer Herr Keesing und Frau Kuperus, da beide mit allen Schülern vernetzt sind. In diesem Cluster befinden sich 31 Knoten. 
+
+Das orangene Cluster umfasst unterschiedliche Akteursgruppen: Zum einen den weiteren Teil von Annes Familie, sowie den engen Kern davon. Zum weiteren Teil ihrer Familie gehören Akteure wie beispielsweise ihre Großeltern und ihre Tanten. Spätestens als die Familie Frank ins Hinterhaus zieht, bricht der Kontakt mit dem weiteren Teil der Familie immer weiter ab. Den engen Teil ihrer Familie bilden ihre Eltern, sowie ihre Schwester Margot. Ihre enge Familie und das gelbe Cluster stellen während der Zeit im Versteck ihr einziges soziales Umfeld dar. In diesem Cluster befinden sich 21 Knoten.
+ 
+Das gelbe Cluster beinhaltet die Hinterhausbewohner und die Helfer, aber ebenso potentielle Verräter des Hinterhauses. Diese letzte Personengruppe besteht zum Beispiel aus verschiedenen Lagermitarbeiter. Diese Akteure passen, sozial gesehen, eigentlich nicht in dieses Cluster. Trotzdem wurden sie aufgrund ihrer Verbindungen mit den Hinterhausbewohnern vom Algorithmus zu diesem Cluster zugeordnet. In diesem Cluster befindet sich zusätzlich Charlotte Kaletta. Sie war die Geliebte des Hinterhausbewohners Fritz Pfeffer und wurde vom Algorithmus in dieses Cluster eingeordnet, obwohl sie hauptsächlich Kontakt zu Pfeffer hatte. Dieses Cluster umfasst insgesamt 13 Knoten.
+
+Das grüne Cluster beinhaltet nur zwei Knoten: Hello Silberberg, ein Verehrer und Freund von Anne, sowie seine Freundin Ursula Löwenbach. Hello und Ursula haben beide kaum Kanten zu anderen Akteuren und bilden daher ein eigenes Cluster, da die Dichte zwischen beiden Akteuren daher dementsprechend hoch ist. 
+
+Zusätzlich finden sich in dem Edge-Betweenness-Netzwerk elf Einzelpersonen, die kaum Verbindungen zu anderen Knoten aufweisen. Daher wurden sie vom Algorithmus nicht zu spezifischen Clustern zugeordnet. Annes Umfeld hat sich im Laufe der Zeit im Hinterhaus stark verkleinert. Da Anne keinen Kontakt zu ihrer Familie halten und nicht mehr zur Schule gehen konnte, fielen zwei Bezugsgruppen komplett aus ihrem Leben weg. Zum einen das rote Cluster mit ihren Schulkameraden, sowie ein großer Teil des orangenen Clusters mit ihrer Familie. AUßerdem verschwindet das grüne Cluster aus ihrem Leben. Durch diese Verkleinerung von Annes Kontakten, war ebenso die Wahrscheinlichkeit, dass sich Informationen über den Aufenthaltsort der Familie Frank verbreiten konnten, wesentlich geringer. Nach diesem Muster verkleinerte sich womöglich ebenfalls das soziale Umfeld der anderen Hinterhausbewohner. Diese Abschottung von verschiedenen Bezugsgruppen war nötig, um möglichst lange in Sicherheit versteckt bleiben zu können.
+
+
+## Helfer und Hinterhausbewohner
+
+
+```{r Helfer und Hinterhausbewohner, fig.height=5, fig.width=8 }
+
+helfer_bewohner <- subgraph.edges(af_time,E(af_time)[relationship=="4"])
+helfer_bewohner
+
+#Alle Knoten einfärben
+V(helfer_bewohner)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(helfer_bewohner)$resident
+V(helfer_bewohner)[V(helfer_bewohner)$resident=="1"]$color <- "orange"
+
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(helfer_bewohner)[V(helfer_bewohner)$type == 1]$shape <- "circle"
+V(helfer_bewohner)[V(helfer_bewohner)$type == 2]$shape <- "square"
+
+plot(   helfer_bewohner, 
+        main="Helfer und Hinterhausbewohner",
+        sub= "rot = Helfer, orange = Hinterhausbewohner",
+        layout= layout_nicely,
+        asp = 0,
+        rescale = TRUE,
+        edge.curved =.15,
+        vertex.size = 6,
+        vertex.label.dist = 1.3,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.color = gray(0.7, alpha=0.7))
+```
+
+Dieses Teilnetzwerk zeigt die Hinterhausbewohner und deren wichtigsten Verbündeten: die Helfer. Im Hinterhaus wohnten insgesamt acht Personen. Diese waren: die Familie Frank, die Familie van Pels und Fritz Pfeffer. Um so lange versteckt leben zu können, waren sie auf die Hilfe von außen angewiesen. Zu den insgesamt sechs Helfer gehörten Miep und Jan Gies, Victor Kugler, Johannes Kleiman und Bep und Johan Voskuijl.
+ 
+Otto Frank, der Vater der Familie Frank, war Kaufmann und übernahm beim Umzug nach Amsterdam die deutsche Vertretung des Lebensmittelunternehmens Opekta. Er organisierte und plante zusammen mit seinen christlichen Mitarbeitern und Hermann van Pels den Umzug ins versteckte Hinterhaus. Hermann war ein alter Geschäftsfreund von Otto Frank und begann 1938 mit ihm bei Opekta zu arbeiten. Edith Frank, Ottos Frau, war als Hausfrau Zu Hause, da sie kein Niederländisch sprach. Anne und Margot Frank waren ihre Töchter. Margot war die ältere von beiden und laut Annes Erzählungen sehr klug (vgl. Pressler, 2015) und lernte viel. Anne Frank war die jüngste Bewohnerin im Hinterhaus. Sie verstand sich besonders gut mit Miep Gies und Bep Voskuijl. 
+ 
+Zur Familie van Pels gehörten außerdem noch Auguste van Pels, sowie ihr Sohn Peter. Auguste und Hermann van Pels waren auch außerhalb der Arbeit mit den Franks befreundet und kamen regelmäßig zum Kaffee trinken vorbei. Peter van Pels war bereits fertig mit der Schule und hatte eine Lehre als Tischler abgeschlossen. Fritz Pfeffer kam etwas später als die anderen Bewohner ins Hinterhaus. Pfeffer war vor der Zeit im Versteck einige Male zusammen mit seiner Freundin bei den Franks zum Kaffee eingeladen. Dort lernte er ebenfalls Miep Gies kennen, die dann zur neuen Patientin in seiner Zahnarztpraxis wurde.
+ 
+Die Helfer waren, bis auf Jan Gies, alle Mitarbeiter der Firma Opekta. Sie kannten dementsprechend Otto Frank und Hermann van Pels gut und halfen den beiden bei der Planung des Verstecks und versorgten später die Versteckten. Victor Kugler war einer der ersten Mitarbeiter von Otto Frank. Die beiden kannten sich bereits von früheren Geschäften. Ebenso kannte auch Johannes Kleiman Otto Frank vor der gemeinsamen Arbeit bei Opekta. Nachdem Otto das Unternehmen als Jude nicht mehr leiten durfte, wurde Kleiman sein Nachfolger. Miep Gies stand in einem freundschaftlichen Verhältnis zu den Franks, später vor allem zu Anne. Sie versorgte die Hinterhausbewohner ebenfalls mit Büchern und Zeitungen. Ihr Mann Jan Gies arbeitet in dem Teilunternehmen Petacon, das zu Opekta gehörte. Auch er half, die Versteckten zu versorgen. Bep Voskuijl war eine Bürogehilfin bei Opekta. Als Otto Frank begann, das Hinterhaus der Firma als Versteck auszubauen, wusste Bep zunächst nichts davon. Später wurde sie eingeweiht und sagte wie ihre Kollegen der Familie ihre Hilfe zu.  Beps Aufgabe bestand darin, die vom Milchmann im Büro abgelieferte Milch zu den Versteckten ins Hinterhaus zu schmuggeln. Außerdem buchte sie unter ihrem eigenen Namen Fernkurse, wie zum Beispiel Latein, für Margot und Anne Frank. Bep nahm oft Mahlzeiten mit den Untergetauchten im Hinterhaus ein. Johan Voskuijl, Beps Vater, arbeitet ebenfalls bei Opekta. Er war bereits vor Bep in die Pläne der Familie Frank eingeweiht.
+
+Überraschend ist, dass nur sechs Personen eine Gruppe von acht Menschen für einen solch langen Zeitraum verstecken konnten, ohne aufzufliegen. Die Helfer setzten jeden Tag ihr Leben für die Hinterhausbewohner ins Spiel, um diese zu versorgen. In dieser Forschungsarbeit wurde ursprünglich davon ausgegangen, dass ein weitaus größeres Netzwerk erforderlich wäre, um eine solche Aktion erst durchführen zu können (Hypothese e). Um das Leben im Hinterhaus überhaupt zu ermöglichen, brauchte es ein hohes Maß an Diskretion und Organisation der Helfer. Da diese sehr auf Geheimhaltung bedacht waren, da ihr eigenes Leben ebenfalls davon abhängig war, blieb das Hinterhaus zweieinhalb Jahre unentdeckt. Die sechs Helfer hatten ihre Aufgaben klar unterteilt: Einer kümmerte sich um jene Lebensmittel und ein anderer Helfer versorgte die Versteckten mit Informationen über die aktuelle Situation usw. Durch diese klare Aufgabenverteilung und die Verschwiegenheit der Helfer, funktionierte dieses Konzept auch mit wenigen Personen. Außerdem war es nötig, nur wenige Menschen in das Geheimnis der Versteckten einzuweihen. Ansonsten hätte sich das Risiko entdeckt zu werden, drastisch erhöht.
+
+
+
+## Fünf zeitgebundene Teilnetzwerke im Vergleich
+
+*Zeitabschnitte*
+
+- 1 = Frankfurt (Geburt Juni 1929 - Februar 1934)
+- 2 = Amsterdam - Umzug ins Hinterhaus (Februar 1934 - Juni 1942)
+- 3 = Hinterhaus Teil 1 (Juli 1942- Dezember 1942)
+- 4 = Hinterhaus Teil 2 (Januar 1943 - Dezember 1943)
+- 5 = Hinterhaus Teil 3 (Januar 1944 - August 1944)
+- 6 = Nach dem Krieg (Januar 1946)
+- 7 = vor Annes Geburt (1929 und früher)
+
+
+```{r Fünf zeitgebundene Teilnetzwerke im Vergleich , fig.height=6, fig.width=10}
+
+#Timedefinition 1 
+
+edge.attributes(af)$timedefinition
+
+timedefinition1 <- subgraph.edges(af, E(af)[timedefinition==" 1"])
+timedefinition1
+
+#Alle Knoten einfärben
+V(timedefinition1)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(timedefinition1)$resident
+V(timedefinition1)[V(timedefinition1)$resident=="1"]$color <- "orange"
+
+
+size <- E(timedefinition1)$width <- E(timedefinition1)$weight
+
+#Veränderung der dargestellten Kantenstärke
+E(timedefinition1)[E(timedefinition1)$weight == 1]$weight <- "0.5"
+E(timedefinition1)[E(timedefinition1)$weight == 2]$weight <- "1"
+E(timedefinition1)[E(timedefinition1)$weight == 3]$weight <- "1.5"
+E(timedefinition1)[E(timedefinition1)$weight == 4]$weight <- "2"
+E(timedefinition1)[E(timedefinition1)$weight == 5]$weight <- "2.5"
+
+
+plot(
+  timedefinition1, 
+  asp = 0,
+  rescale = TRUE,
+  edge.size = size,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 5,
+  main= "
+  Ab Annes Geburt \n Frankfurt bis Umzug nach Amsterdam \n Juni 1929 - Februar 1934",
+  sub= "rot = Helfer, orange = Hinterhausbewohner",
+  vertex.label.dist = 1.0,
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.frame.color = NA,
+  vertex.label.font = 1,
+  vertex.label.dist = 0.9,
+  vertex.label.degree = pi/2,
+  edge.size = size,
+  edge.color = gray(0.7, alpha=0.7) #alpha ist Transparenz gray gibt an von 0 (weiß) bis 1 (schwarz)
+  )
+
+
+#Timedefinition 2
+
+timedefinition2 <- subgraph.edges(af, E(af)[timedefinition==" 2"])
+timedefinition2
+
+#Alle Knoten einfärben
+V(timedefinition2)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(timedefinition2)$resident
+V(timedefinition2)[V(timedefinition2)$resident=="1"]$color <- "orange"
+
+E(timedefinition2)$weight
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(timedefinition2)[V(timedefinition2)$type == 1]$shape <- "circle"
+V(timedefinition2)[V(timedefinition2)$type == 2]$shape <- "square"
+
+size <- E(timedefinition2)$width <- E(timedefinition2)$weight
+E(timedefinition2)[E(timedefinition2)$weight == 1]$weight <- "0.5"
+E(timedefinition2)[E(timedefinition2)$weight == 2]$weight <- "1.0"
+E(timedefinition2)[E(timedefinition2)$weight == 3]$weight <- "1.5"
+E(timedefinition2)[E(timedefinition2)$weight == 4]$weight <- "2.0"
+E(timedefinition2)[E(timedefinition2)$weight == 5]$weight <- "2.5"
+
+plot(
+  timedefinition2,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 5,
+  vertex.frame.color = NA,
+  main= "
+  Amsterdam - Umzug ins Hinterhaus \n Februar 1934 - Juni 1942",
+  sub= "rot = Helfer, orange = Hinterhausbewohner",
+  vertex.label.dist = 0.9,
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.size = size,
+  edge.color = gray(0.7, alpha=0.7)
+)
+
+
+#Timedefinition 3
+
+timedefinition3 <- subgraph.edges(af, E(af)[timedefinition==" 3"])
+timedefinition3
+
+#Alle Knoten einfärben
+V(timedefinition3)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(timedefinition3)$resident
+V(timedefinition3)[V(timedefinition3)$resident=="1"]$color <- "orange"
+
+E(timedefinition3)$weight
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(timedefinition3)[V(timedefinition3)$type == 1]$shape <- "circle"
+V(timedefinition3)[V(timedefinition3)$type == 2]$shape <- "square"
+
+size <- E(timedefinition3)$width <- E(timedefinition3)$weight
+E(timedefinition3)[E(timedefinition3)$weight == 1]$weight <- "0.5"
+E(timedefinition3)[E(timedefinition3)$weight == 2]$weight <- "1"
+E(timedefinition3)[E(timedefinition3)$weight == 3]$weight <- "1.5"
+E(timedefinition3)[E(timedefinition3)$weight == 4]$weight <- "2"
+E(timedefinition3)[E(timedefinition3)$weight == 5]$weight <- "2.5"
+
+
+plot(
+        timedefinition3, 
+        main= "
+        
+        Hinterhaus Teil 1 \n Juli 1942 - Dezember 1942",
+        sub= "rot = Helfer, orange = Hinterhausbewohner",
+        vertex.frame.color = NA,
+        layout = layout_nicely,
+        asp = 0,
+        rescale = TRUE,
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.label.dist = 0.9,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.size = size,
+        edge.color = gray(0.7, alpha=0.7)
+        )
+
+
+
+#Timedefintion 4
+
+timedefinition4 <- subgraph.edges(af, E(af)[timedefinition==" 4"])
+timedefinition4
+
+#Alle Knoten einfärben
+V(timedefinition4)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(timedefinition4)$resident
+V(timedefinition4)[V(timedefinition4)$resident=="1"]$color <- "orange"
+
+E(timedefinition4)$weight
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(timedefinition4)[V(timedefinition4)$type == 1]$shape <- "circle"
+V(timedefinition4)[V(timedefinition4)$type == 2]$shape <- "square"
+
+size <- E(timedefinition4)$width <- E(timedefinition4)$weight
+E(timedefinition4)[E(timedefinition4)$weight == 1]$weight <- "0.5"
+E(timedefinition4)[E(timedefinition4)$weight == 2]$weight <- "1"
+E(timedefinition4)[E(timedefinition4)$weight == 3]$weight <- "1.5"
+E(timedefinition4)[E(timedefinition4)$weight == 4]$weight <- "2"
+E(timedefinition4)[E(timedefinition4)$weight == 5]$weight <- "2.5"
+
+
+plot(
+        timedefinition4,  
+        asp = 0,
+        rescale = TRUE,
+        main= "
+        Hinterhaus Teil 2 \n Januar 1943 - Dezember 1943",
+        sub= "rot = Helfer, orange = Hinterhausbewohner",
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.frame.color = NA,
+        layout = layout_nicely,
+        vertex.label.dist = 0.9,
+        vertex.label.degree = pi/2,
+        edge.lty = 1,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.label.font = 1,
+        edge.size = size,
+        edge.color = gray(0.6, alpha=0.7)
+        )
+
+#Timedefinition 5
+
+timedefinition5 <- subgraph.edges(af, E(af)[timedefinition==" 5"])
+timedefinition5
+
+
+#Alle Knoten einfärben
+V(timedefinition5)$color = "darkred"
+
+#Hinterhausbewohner einfärben
+vertex.attributes(timedefinition5)$resident
+V(timedefinition5)[V(timedefinition5)$resident=="1"]$color <- "orange"
+
+E(timedefinition5)$weight
+
+size <- E(timedefinition5)$width <- E(timedefinition5)$weight
+E(timedefinition5)[E(timedefinition5)$weight == 1]$weight <- "0.5"
+E(timedefinition5)[E(timedefinition5)$weight == 2]$weight <- "1"
+E(timedefinition5)[E(timedefinition5)$weight == 3]$weight <- "1.5"
+E(timedefinition5)[E(timedefinition5)$weight == 4]$weight <- "2"
+E(timedefinition5)[E(timedefinition5)$weight == 5]$weight <- "2.5"
+
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(timedefinition5)[V(timedefinition5)$type == 1]$shape <- "circle"
+V(timedefinition5)[V(timedefinition5)$type == 2]$shape <- "square"
+
+plot(
+        timedefinition5, 
+        main= "
+        
+        Das letzte Jahr im Hinterhaus \n Januar 1944 - August 1944",
+        sub= "rot = Helfer, orange = Hinterhausbewohner",
+        layout= layout_nicely,
+        asp = 0,
+        vertex.frame.color = NA,
+        rescale = TRUE,
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.label.dist = 0.9,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.size = size,
+        edge.color = gray(0.7, alpha=0.7))
+
+```
+
+```{r Berechnungen zur Knotenanzahl der Zeitabschnitte}
+
+#Timedefinition 1
+timedefinition1
+
+#Timedefinition 2
+timedefinition2
+
+#Timedefinition 3
+timedefinition3
+
+#Timedefinition 4
+timedefinition4
+
+#Timedefinition 5
+timedefinition5
+
+```
+
+Um sich zunächst einen allgemeinen Überblick über die Entwicklung der sozialen Kontakte von Anne Frank in den fünf unterschiedlichen Zeitabschnitten zu verschaffen, bietet sich ein Blick auf die Entwicklung der Anzahl der Knoten und Kanten in den Teilnetzwerken an.
+Im ersten Zeitabschnitt konnten wir durch intensive Recherchearbeit 20 verschiedene Akteure (Knoten) mit insgesamt 116 Verbindungen (Kanten) in Annes Umfeld ausmachen. Die Anzahl der Knoten und Kanten definiert hierbei alle Akteure und Verbindungen inklusive Anne Frank.
+
+Das Teilnetzwerk zwei besitzt mit 50 Knoten im Vergleich mehr als doppelt so viele Akteure. Vor allem durch den Kontakt zu ihren Mitschülern steigt diese Zahl stark an. Auch wenn Anne nicht mit allen (vor allem gleichaltrigen) Personen in ihrem Umfeld ein gutes Verhältnis hatte, war sie laut eigenen Angaben in ihrem Tagebuch in der Schule ein beliebtes Mädchen (vgl. Frank, 2015 ). Sie schreibt beispielsweise davon, dass sie zu ihrer Schulzeit viele Verehrer hatte und lässt sich allgemein als kontaktfreudiges Mädchen beschreiben. Die Anzahl der Kanten steigt in Zeitabschnitt zwei auf 512 an, da alle ihrer Schulfreunde auch untereinander eine Verbindung hatten. 
+
+Der bedeutendste Unterschied lässt sich durch einen Vergleich des zweiten und dritten zeitlichen Teilnetzwerkes erkennen. Da Anne ab dem Teilnetzwerk drei gemeinsam mit ihrer Familie und vier weiteren jüdischen Bewohnern im Hinterhaus untertauchte, verringert sich die Anzahl der Akteure in Annes Umfeld auf 16. Anne musste also während ihres Aufenthalts im Hinterhaus sämtliche soziale Kontakte abbrechen und besaß nur noch wenige Bezugspersonen. Diese Erkenntnis bestätigt somit die Arbeitshypothese a), die besagt, dass sich das soziale Umfeld von Anne Frank durch den Aufenthalt im Hinterhaus minimiert. Es ist anzunehmen, dass die soziale Isolation für die kontaktfreudige Anne sicherlich gerade in der Pubertät eine echte Herausforderung war. Dass Anne Frank sozial weitgehend abgeschottet von der Außenwelt war, zeigt sich auch in den Zeitabschnitten vier und fünf. Die Anzahl der Knoten steigt bei diesen nur gering auf jeweils 17 und 20 an, da potenzielle Verräter der Hinterhausbewohner hinzukommen.
+
+Im Gesamtvergleich ist vor allem auffällig, dass sich nicht nur die Anzahl ihrer sozialen Kontakte drastisch verringert, sondern sich auch ihre Bezugspersonen selbst stark verändern. Somit spielen Akteure wie die gesamten Helfer im Hinterhaus oder der Hinterhausbewohner Peter van Pels, zu dem Anne im Laufe der Zeit eine enge Verbindung aufbaut erst ab Teilnetzwerk drei überhaupt eine Rolle in ihrem Leben. Zu ihm baut Anne während der Zeit im Hinterhaus eine Liebesbeziehung auf, worauf im weiteren Verlauf noch einmal intensiv eingegangen wird. Zudem nimmt ihr Tagebuch Kitty während der gesamten Zeit im Hinterhaus eine wichtige Position für Anne ein. Aufgrund der völligen Isolation ist sie wie eine Freundin für Anne, was im weiteren Verlauf des Forschungsberichtes noch einmal genauer untersucht wird.  
+
+
+```{r Netzwerkmaß Degree}
+
+#Timedefinition 1
+af1_deg <- degree(timedefinition1)
+af1_deg
+
+#Timedefinition 2
+af2_deg <- degree(timedefinition2)
+af2_deg
+
+#Timedefinition 3
+af3_deg <- degree(timedefinition3)
+af3_deg
+
+#Timedefinition 4
+af4_deg <- degree(timedefinition4)
+af4_deg
+
+#Timedefinition 5
+af5_deg <- degree(timedefinition5)
+af5_deg
+
+```
+
+Die Veränderung des Degree-Wertes bestätigt weiterhin die Aussagen über die Veränderung von Annes sozialem Umfeld. In Zeitabschnitt eins hatte Anne 18 direkte Verbindungen zu anderen Akteuren. Durch die Verbindungen zu ihrer Schulklasse erhöhte sich dieser Wert im zweiten Zeitabschnitt auf 37 direkte Verbindungen. Im Zeitabschnitt drei, vier und fünf verringerte sich dieser Wert schlagartig auf jeweils  14 und 13 Verbindungen. Diese Werte bestätigen erneut die Annahme einer sozialen Isolation durch den Aufenthalt im Hinterhaus. Die wenigen Kontakte zur Außenwelt lassen sich unter anderem als Schutzmaßnahme verstehen, um das Versteck geheim zu halten.
+
+Die Akteure des Hinterhauses, die eine Verbindung zu potenziellen Verrätern hatten, stellten möglicherweise ein erhöhtes Risiko für ein mögliches Aufdecken des Verstecks dar. In diesen beiden Zeitabschnitten besitzt die Helferin Miep Gies durch ihre Verbindung zu dem Gemüsehändler Hendrik van Hoeve als eine der wenigen Akteure den höchsten Degree-Wert von 15. Die Verbindung zu Hendrik van Hoeve, die sie zwangsläufig hatte, um die Hinterhausbewohner mit Essen zu versorgen, könnte somit ein Risiko für die Sicherheit dieser gewesen sein.
+
+
+```{r Netzwerkmaß Dichte}
+
+#Timedefinition 1
+edge_density(timedefinition1)
+
+#Timedefinition 2
+edge_density(timedefinition2)
+
+#Timedefinition 3
+edge_density(timedefinition3)
+
+#Timedefinition 4
+edge_density(timedefinition4)
+
+#Timedefinition 5
+edge_density(timedefinition5)
+
+```
+
+Auch durch die Bestimmung des Netzwerkmaßes Dichte lassen sich einige Aussagen über das soziale Umfeld von Anne im Laufe der Zeit treffen. Im Allgemeinen besitzen die Teilnetzwerke drei und vier einen höheren Dichtewert als die Netzwerke eins und zwei. Der Dichtewert bei ersten Teilnetzwerk liegt bei 61,1 Prozent, der bei Teilnetzwerk zwei bei 41,8 Prozent. Dieser Unterschied kommt vor allem dadurch zustande, dass sich Annes soziale Umfeld in Teilnetzwerk zwei durch die Schule im Vergleich zu Teilnetzwerk eins stark vergrößert hat. Aus diesem Grund besitzt die Dichte in Teilnetzwerk eins einen höheren Wert. Der entscheidende Unterschied wird auch hier wieder bei einem Vergleich von Teilnetzwerk zwei und drei deutlich, da sich der Dichtewert im dritten Zeitabschnitt auf 76,7 Prozent erhöht. Die wenigen Kontakte, die sie zu dieser Zeit hatte, also sowohl Hinterhausbewohner als auch Helfer, waren alle miteinander verbunden. Somit steigt der Dichtewert in diesem Zeitabschnitt. Daraus lassen sich eine nicht immer freiwillige enge Verbundenheit und ein enger Zusammenhalt der Akteure schließen.
+
+Durch das Wohnen auf engstem Raum, das auch sinnbildlich für eine hohe Dichte im Netzwerk angesehen werden kann, sind die Akteure des dritten Teilnetzwerkes zwangsläufig aufeinander angewiesen. Sie sind von der Gesellschaft fast vollständig abgeschottet, jedoch innerhalb ihres Netzwerkes kaum isoliert. Allein durch die Präsenz der Frau von Fritz Pfeffer, Charlotte Karletta, die sich nicht im Hinterhaus versteckte, und von dem Tagebuch der Anne Frank, Kitty, beträgt die Dichte keine hundert Prozent. Kitty kann in diesem Zusammenhang als ein Symbol von Privatsphäre verstanden werden, da nur Anne eine Verbindung zu ihrem Tagebuch besaß. Kitty nimmt die Rolle einer Freundin für Anne ein und sorgt so dafür, dass Anne trotz der geringen Isolation und der hohen Dichte im Hinterhaus die Möglichkeit besaß, Geheimnisse aufzubewahren. Aufgrund der Tatsache, dass es Zeiten im Hinterhaus gab, in denen Anne sich sehr allein fühlte und die ganze Welt gegen sie zu sein schien, war Kitty eine wichtige Bezugsperson für sie. 
+
+Die Dichte im Teilnetzwerk vier besitzt wiederum einen etwas geringeren Wert, da hier der Verräter Hendrik van Hoeve hinzu kommt. Der Dichte-Wert beträgt hier 71,3 Prozent. Im Teilnetzwerk 5 kommen die restlichen Verräter hinzu. Somit hat das Teilnetzwerk 5 einen  Dichte-Wert von 55,3 Prozent. Die Verräter haben meist nur wenige Verbindungen zu anderen Knoten, wodurch der Dichtewert sinkt. Die Dichte zwischen den Hinterhausbewohnern und Helfern bleibt jedoch weiterhin gleich hoch.
+Inwiefern sich das auf die Entwicklung des Konfliktpotenzials und Verhältnisses der Akteure auswirkte, wird im weiteren Verlauf des Berichtes noch analysiert. 
+
+
+## Otto Frank als Broker
+
+Der Betweenness-Wert wurde in Teilnetzwerk zwei genauer untersucht. Dabei wurde vor allem die Broker-Funktion von Otto Frank sehr deutlich, da er hinter Anne und Oma Holländer den höchsten Betweenness-Wert besitzt. Durch seine Verbindungen zu den gesamten Helfern, die für das Überlegen im Hinterhaus im weiteren zeitlichen Verlauf eine zentrale Rolle spielten, wurde das Untertauchen der Familie erst möglich gemacht. Daher besitzt Otto eine zentrale und wichtige Funktion im Bezug auf die Herstellung von wichtigen Kontakten und kann somit aus Broker bezeichnet werden. Aus diesem Grund wurde das Teilnetzwerk zwei noch einmal dargestellt und analysiert, diese Mal mit dem zentralen Akteur Otto Frank (grün eingefärbt). 
+
+```{r Netzwerkmaß Betweenness im Teilnetzwerk 2}
+
+betweenness(timedefinition2, normalized = TRUE)
+
+```
+
+Wie bereits im obigen Abschnitt erwähnt, lässt sich anhand des Betweenness-Wertes die Broker-Funktion von Otto Frank gut erkennen, da Otto hinter Anne Frank (1,94 Prozent) und Oma Rosa Holländer-Stern (0,84 Prozent) den dritthöchsten Betweenness-Wert von 0,68 Prozent besitzt. Anne und Oma Rosa haben dementsprechend zwar eine allgemein höhere Wahrscheinlichkeit, eine Verbindung zu anderen Knoten im Netzwerk herzustellen, dennoch besitzt Otto auf die Akteure im Hinterhaus bezogen eine Broker-Funktion, was sich gut anhand des Teilnetzwerkes erkennen lässt. Ohne seine Position hätte die Familie vermutlich nicht untertauchen können.
+
+```{r Otto Frank als Broker, fig.height=9, fig.width=16}
+
+#Otto als Broker hervorheben
+
+list.edge.attributes(af)
+edge.attributes(af)$timedefinition
+
+timedefinition2 <- subgraph.edges(af, E(af)[timedefinition==" 2"])
+timedefinition2
+
+zoom <- layout_nicely(timedefinition2)
+zoom <- norm_coords(zoom, ymin=-1, ymax=1, xmin=-1, xmax=1)
+par(mar=c(0,2,0,0))
+
+E(timedefinition2)$weight
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(timedefinition2)[V(timedefinition2)$type == 1]$shape <- "circle"
+V(timedefinition2)[V(timedefinition2)$type == 2]$shape <- "square"
+
+
+#Alle Knoten einfärben
+V(timedefinition2)$color = "darkred"
+
+
+V(timedefinition2)$color = "darkred"
+V(timedefinition2)[V(timedefinition2)$resident=="1"]$color <- "orange"
+V(timedefinition2)[V(timedefinition2)$name == "Otto Frank"]$color <- "darkgreen"
+
+size <- E(timedefinition2)$width <- E(timedefinition2)$weight
+E(timedefinition2)[E(timedefinition2)$weight == 1]$weight <- "0.5"
+E(timedefinition2)[E(timedefinition2)$weight == 2]$weight <- "1.0"
+E(timedefinition2)[E(timedefinition2)$weight == 3]$weight <- "1.5"
+E(timedefinition2)[E(timedefinition2)$weight == 4]$weight <- "2.0"
+E(timedefinition2)[E(timedefinition2)$weight == 5]$weight <- "2.5"
+
+
+plot(
+  timedefinition2,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 5,
+  main= "
+          Otto Frank als Broker",
+  sub= "rot = Helfer, orange = Hinterhausbewohner, grün = Otto Frank",
+  vertex.label.dist = 0.6,
+  vertex.label.family = "Helvetica",
+    vertex.frame.color = NA,
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.size = size,
+  edge.color = gray(0.7, alpha=0.7)
+)
+
+```
+
+Bei der Visualisierung des Teilnetzwerk zwei wird vor allem die Broker-Funktion von Otto Frank (hier grün eingefärbt) deutlich sichtbar. Bei Teilnetzwerk zwei handelt es sich um den zeitlichen Abschnitt, bevor sich die Familie Frank in dem Hinterhaus in Amsterdam versteckte. Ohne den Akteur Otto Frank wäre dies allerdings schwer möglich gewesen. Er stellte sowohl den Kontakt zu den Hinterhausbewohnern Fritz Pfeffer und Herrmann und Auguste van Pels, als auch zu den Helfern her, die die untergetauchten Juden später versteckten und versorgten. Auch seine Frau Edith Frank kannte zwar die drei Hinterhausbewohner und Miep Gies, da sich Otto und Edith öfter mit ihnen zu Kaffee verabredeten. Jedoch stellte Otto die Verbindung zu den genannten Akteuren her. Dementsprechende lernte Edith die beiden über Otto kennen. Otto war daher die treibende und verbindende Kraft, die ein geeignetes und hilfsbereites Umfeld in dieser Situation zum Helfen animieren konnte, da er zudem bereits eine Verbindung zu allen anderen Helfern hatte.  Somit lässt sich die Hypothese b) widerlegen, da ausschließlich Otto und teilweise Edith in Teilnetzwerk zwei bereits eine Verbindung zu den späteren Helfern und Bewohnern im Hinterhaus besaßen. Bis auf Fritz Pfeffer, der die Helferin Miep Gies bereits vor dem Aufenthalt im Hinterhaus kannte, lernten die anderen Akteure die Helfer erst später kennen.
+
+### Die Stärke schwacher Beziehungen
+
+Weiterhin lässt sich das Phänomen der „Stärke schwacher Beziehungen“ von Mark Granovetter auf das Teilnetzwerk anwenden. Dabei ist anzumerken, dass Otto sowohl zu den späteren Hinterhausbewohnern Fritz Pfeffer und Hermann und Auguste van Pels als auch zu den Helfern eine Beziehung hatte, da sie sich einige Male zum Kaffee verabredeten. Jedoch handelte es sich dabei eher um eine oberflächliche Beziehung. Für den weiteren Verlauf, in diesem Fall für das Versteck im Hinterhaus, haben sie allerdings eine sehr starke Bedeutung. Granovetter spricht in diesem Zusammenhang davon, dass eher oberflächliche Bekanntschaften im Sinne schwacher Beziehungen, oft sehr bedeutend für den Zugang zu Informationen sind. (vgl. Granovetter, 1977). Diese Verbindungen sorgten dafür, dass das Untertauchen der Familie Frank überhaupt erst möglich war. 
+
+## Teilnetzwerke der Hinterhausbewohner im Zeitverlauf
+
+Um herauszufinden, inwiefern sich die einzelnen Beziehungen innerhalb der Zeit im Hinterhaus zwischen Anne und ihren Bezugspersonen verändert haben, wurden die Kanten der Zeitabschnitte von Juli 1942 bis August 1944 (Timedefinition drei, vier und fünf) mit einer entsprechenden Gewichtung versehen. Mit dem zugehörigen Edge-Attribut „weight“ kann die jeweilige Ausprägung der Beziehungsstärke visuell hervorgehoben werden.
+
+```{r Verbindungen der Hinterhausbewohner im Zeitverlauf, fig.height=3, fig.width=5}
+
+#Alle Akteure außer den Hinterhausbewohnern werden ausgeblendet
+
+#Hinterhaus Teil 3
+
+resident_timedefinition3 <- delete_vertices(timedefinition3, V(timedefinition3)[resident=="2"]) 
+resident_timedefinition3
+
+E(resident_timedefinition3)$weight
+
+size <- E(resident_timedefinition3)$width <- E(resident_timedefinition3)$weight
+E(resident_timedefinition3)[E(resident_timedefinition3)$weight == 1]$weight <- "0.5"
+E(resident_timedefinition3)[E(resident_timedefinition3)$weight == 2]$weight <- "1"
+E(resident_timedefinition3)[E(resident_timedefinition3)$weight == 3]$weight <- "1.5"
+E(resident_timedefinition3)[E(resident_timedefinition3)$weight == 4]$weight <- "2"
+E(resident_timedefinition3)[E(resident_timedefinition3)$weight == 5]$weight <- "2.5"
+
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(resident_timedefinition3)[V(resident_timedefinition3)$type == 1]$shape <- "circle"
+V(resident_timedefinition3)[V(resident_timedefinition3)$type == 2]$shape <- "square"
+
+plot(
+        resident_timedefinition3, 
+        main="  
+        Beziehung der Hinterhausbewohner \n Hinterhaus Teil 1 \n Juli 1942 - Dezember 1942",
+        layout= layout_nicely,
+        asp = 0,
+        rescale = TRUE,
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.label.dist = 1.3,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.color = "darkred",
+        vertex.frame.color = NA,
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.size = size,
+        edge.color = gray(0.7, alpha=0.7))
+
+
+#Hinterhaus Teil4
+
+resident_timedefinition4 <- delete_vertices(timedefinition4, V(timedefinition4)[resident=="2"]) 
+resident_timedefinition4
+
+E(resident_timedefinition4)$weight
+
+size <- E(resident_timedefinition4)$width <- E(resident_timedefinition4)$weight
+E(resident_timedefinition4)[E(resident_timedefinition4)$weight == 1]$weight <- "0.5"
+E(resident_timedefinition4)[E(resident_timedefinition4)$weight == 2]$weight <- "1"
+E(resident_timedefinition4)[E(resident_timedefinition4)$weight == 3]$weight <- "1.5"
+E(resident_timedefinition4)[E(resident_timedefinition4)$weight == 4]$weight <- "2"
+E(resident_timedefinition4)[E(resident_timedefinition4)$weight == 5]$weight <- "2.5"
+
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(resident_timedefinition4)[V(resident_timedefinition4)$type == 1]$shape <- "circle"
+V(resident_timedefinition4)[V(resident_timedefinition4)$type == 2]$shape <- "square"
+
+
+
+plot(
+        resident_timedefinition4, 
+        main="  
+        Beziehung der Hinterhausbewohner \n Hinterhaus Teil 2 \n Januar 1943 - Dezember 1943",
+        asp = 0,
+        rescale = TRUE,
+        layout= layout_nicely,
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.label.dist = 1.3,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.color = "darkred",
+        vertex.frame.color = NA,
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.size = size,
+        edge.color = gray(0.7, alpha=0.7))
+
+
+#Hinterhaus Teil 5
+
+resident_timedefinition5 <- delete_vertices(timedefinition3, V(timedefinition3)[resident=="2"]) 
+resident_timedefinition5
+
+E(resident_timedefinition5)$weight
+
+size <- E(resident_timedefinition5)$width <- E(resident_timedefinition5)$weight
+E(resident_timedefinition5)[E(resident_timedefinition5)$weight == 1]$weight <- "0.5"
+E(resident_timedefinition5)[E(resident_timedefinition5)$weight == 2]$weight <- "1"
+E(resident_timedefinition5)[E(resident_timedefinition5)$weight == 3]$weight <- "1.5"
+E(resident_timedefinition5)[E(resident_timedefinition5)$weight == 4]$weight <- "2"
+E(resident_timedefinition5)[E(resident_timedefinition5)$weight == 5]$weight <- "2.5"
+
+
+#Zuweisungen für das Two-Mode Netzwerk
+V(resident_timedefinition5)[V(resident_timedefinition5)$type == 1]$shape <- "circle"
+V(resident_timedefinition5)[V(resident_timedefinition5)$type == 2]$shape <- "square"
+
+plot(
+        resident_timedefinition5, 
+        main= "  
+        Das letzte Jahr im Hinterhaus \n Januar 1944 - August 1944",
+        layout= layout_nicely,
+        asp = 0,
+        rescale = TRUE,
+        edge.curved = .15,
+        vertex.size = 5,
+        vertex.label.dist = 1.3,
+        vertex.label.family = "Helvetica",
+        vertex.label.color = "black",
+        vertex.color = "darkred",
+        vertex.frame.color = NA,
+        vertex.label.font = 1,
+        vertex.label.degree = pi/2,
+        edge.size = size,
+        edge.color = gray(0.7, alpha=0.7))
+
+```
+
+Die Kantenstärke definiert sich in den vorliegenden Teilnetzwerken mit den vergebenen Werten eins bis fünf. Dabei steht eine geringe Kantenstärke für eine neutrale Beziehung, gefolgt von geringen Beziehungen verbunden mit negativen Emotionen. Demgegenüber steigert sich die Kantenstärke mit dem Wert mittel im Sinne eines freundschaftlichen Verhältnisses. Der höchste Wert fünf definiert eine starke Zuneigung und Verbundenheit im Sinne einer Liebesbeziehung. 
+
+Allgemein ist davon auszugehen, dass sich aufgrund der isolierten Umstände innerhalb des Hinterhauses insbesondere die Beziehungen von Anne zu ihren Familienmitgliedern intensivierten (Hypothese d). Es handelt sich dabei um eine Ausnahmesituation, in der die Familie enger zusammen rückte, da ihr Leben maßgeblich von der Situation abhing. Es bestand fortan die Bemühung, das Beste aus der Situation zu machen. So schrieb Anne Frank nach wenigen Monaten im Versteck: „Sie sagen, wie gemütlich wir vier es doch haben und dass wir so harmonisch zusammenpassen“ (Frank, 2015, S. 42). Doch das Netzwerk zeigt, dass sich die Beziehungen untereinander mit den andauernden Umständen im Hinterhaus auch in negativer Hinsicht veränderten. Insbesondere das Verhältnis zwischen Anne und ihrer Mutter nimmt im direkten Vergleich ab. Anne pflegte bereits seit ihrer frühen Kindheit keine intensive Beziehung zu ihr. So ist schon zu Beginn der Hinterhauszeit das Verhältnis von einer eher mittleren Zuneigung geprägt. Doch Anne spüre zunehmend, wie sie sich von ihrer Mutter entfremde (vgl. Frank, 2015).  Dieses Empfinden intensivierte sich im Laufe der Monate bis hin zu einer mit negativen Emotionen behafteten Beziehung. Die starke Isolation zur Außenwelt und die damit einhergehenden Umstände des ständigen Zusammenseins tragen mit großer Wahrscheinlichkeit einen entscheidenden Anteil für diese Entwicklung. 
+
+Für Anne gibt es zunächst nur zwei wichtige Ansprechpersonen: ihr Vater Otto und ihr Tagebuch Kitty als ihre beste Freundin. Zu beiden pflegte sie kontinuierlich über die zwei Jahre hinweg eine intensive Verbindung. Anne sah in ihrem Vater einen wahren Schatz, der immer lieb zu ihr war und sie verstand. Doch  „wie lieb er auch ist, kann er mir doch nicht meine frühere Welt ersetzen“ (Frank, 2015, S. 79). Anne versuchte, diesen Schmerz und die Belastung durch die zunehmenden Auseinandersetzungen zu kompensieren, indem  sie ihre Gefühle in dem Tagebuch niederschrieb. So entwickelte sich Kitty für sie von einem Gegenstand zu einer wahren Freundin, der sie alles anvertrauen konnte. Die Annahme, dass sich die familiären Beziehungen innerhalb des Hinterhauses verbessert beziehungsweise verschlechtert haben, kann je nach Gesichtspunkt unterschiedlich beantwortet werden. Dennoch überwiegt die Tendenz einer Verschlechterung der Beziehungen insbesondere gegenüber ihrer Mutter.  Daran erkennt man deutlich, wie zerrissen die Gefühlswelt von Anne ist und wie stark solch ein extremer Einschnitt in das Leben die Beziehungen innerhalb einer Familie beeinflussen und belasten kann.
+
+Das Leben von Anne Frank reduzierte sich innerhalb der Zeit im Hinterhaus auf nur wenige Personen, daher lässt sich die Hypothese anführen, dass sie gerade zu den ihr zuvor unbekannten Mitbewohnern und Helfern eine starke Verbindung aufbaute (Hypothese c). Insbesondere die Beziehung von Anne zu Peter van Pels durchlief eine der intensivsten Entwicklung im Hinterhaus. Zu Beginn beschrieb Anne ihn noch als „Dummkopf“ (Frank, 2015, S. 44). Ihre Haltung ihm gegenüber beschränkte sich zunächst auf das Bild eines unscheinbaren und langweiligen Jungen. Doch mit der anhaltenden räumlichen Nähe steigerte sich auch das gegenseitige Interesse. Innerhalb der drei visualisierten Netzwerke nimmt die Gewichtung der Verbindung zwischen Anne und Peter von einer anfangs negativen Haltung hin zu einer tiefen Verbundenheit in Form von Liebe zu. Ein Grund für diese Zuneigung bestand sicherlich darin, dass Peter zu seiner Mutter ein ähnlich problematisches Verhältnis besaß wie Anne. Sie teilten damit mehrere Anliegen: das Schicksal der Isolation zur Außenwelt, die damit verbundene und anhaltende Anspannung im Hinterhaus und eine ähnliche Gefühlswelt. Inwiefern es sich dabei um wahre Liebe handelte, lässt sich nur schwer beantworten. Durch die intensive gemeinsame Zeit und die allgemeinen Ängste könnte auch die große Sehnsucht nach Halt eine entscheidende Rolle gespielt haben. Nichtsdestotrotz baute Anne damit eine tiefe Verbindung zu einer ihr zuvor völlig unbekannten Person auf, womit sich die aufgestellte Hypothese verifizieren lässt. Bestätigt wird diese Annahme auch durch das Verhältnis zu den Helfern, wenn auch in abgeschwächter Form.
+
+Anne pflegte zu einigen vor dem Hinterhaus eine eher oberflächliche Beziehung, die sich mehr im Sinne einer Bekanntschaft definieren lässt. Mit jedem verstrichenen Monat in dem Versteck wurde Anne jedoch bewusst, welch ein Risiko für die Helfer mit der Unterstützung der Untergetauchten verbunden war. Damit wuchs die Wertschätzung und Dankbarkeit, die sich insbesondere gegenüber der ihr zuvor unbekannten Helferin Bep Voskuijl zu einer tiefen Freundschaft entwickelte.
+
+Die Beziehungen im Hinterhaus waren geprägt von Angst, Konflikten aber auch Zuwendung und Liebe. Dementsprechend differenziert entwickelten sich die einzelnen Beziehungen im Rahmen des kleinen sozialen Umfelds, in dem sich Anne in dieser Zeit zurechtfinden musste.
+
+
+## Konfliktpotenzial im Zeitverlauf
+
+Um die Auseinandersetzungen zwischen den verschiedenen Akteuren in einer solchen Extremsituation darzustellen, wurde in dieser Netzwerkanalyse der Wert „Konfliktpotenzial“ erhoben. Dieser Wert wird in verschiedenen Zeiträumen miteinander verglichen. Dafür wurden unterschiedliche Zeiträume betrachtet: Zum einen der Zeitraum von Februar 1934 bis Juni 1942 (Timedefinition zwei), also die Zeit in Amsterdam vor dem Hinterhaus, sowie der Zeitraum von Juli 1942 bis  Dezember 1942 (Timedefinition drei), also die Zeit während des ersten halben Jahres im Hinterhaus. Außerdem wurden der Zeitraum von Januar 1943 bis Dezember 1943 (Timedefinition vier) und von Januar 1944 bis August 1944 (Timedefinition fünf) ausgewählt. Damit soll der Wandel der Beziehungen zwischen den Akteuren dargestellt werden. Vor allem soll auch die Hypothese beantwortet werden, ob sich die Konfliktpotentiale zwischen den Akteuren während der Zeit im Hinterhaus verstärken (Hypothese g). Bei dem Konfliktpotenzial-Netzwerks wurde eine farbliche Visualisierung in R gewählt. Dabei steht die Farbe Gelb für kein bestehendes Konfliktpotenzial, Orange für sehr selten, Hellrot für ab und zu und Dunkelrot für häufig.
+
+
+```{r Konfliktpotenzial im Zeitverlauf Teilnetzwerk 2,  fig.height=10, fig.width=16}
+
+
+konflikt2 <- subgraph.edges(af, E(af)[timedefinition==" 2"])
+konflikt2
+
+
+#Verräter sollen nicht angezeigt werden
+konflikt2_verräter <- delete.vertices(konflikt2, V(konflikt2)[verräter=="2"])
+konflikt2_verräter
+
+#Type 2 (Tagebuch) ausblenden
+konflikt2_verräter_tagebuch <- delete_vertices(konflikt2_verräter, V(konflikt2_verräter)[type=="2"]) 
+konflikt2_verräter_tagebuch
+                
+                
+#Farbzuweisung
+E(konflikt2_verräter_tagebuch)$konfliktpotenzial
+E(konflikt2_verräter_tagebuch )[E(konflikt2_verräter_tagebuch)$konfliktpotenzial == " 1"]$color <- "yellow"
+E(konflikt2_verräter_tagebuch )[E(konflikt2_verräter_tagebuch)$konfliktpotenzial == " 2"]$color <- "orange"
+E(konflikt2_verräter_tagebuch )[E(konflikt2_verräter_tagebuch)$konfliktpotenzial == " 3"]$color <- "red"
+E(konflikt2_verräter_tagebuch )[E(konflikt2_verräter_tagebuch)$konfliktpotenzial == " 4"]$color <- "dark red"
+E(konflikt2_verräter_tagebuch )[E(konflikt2_verräter_tagebuch)$konfliktpotenzial == "99"]$color <- "NA" 
+
+plot(konflikt2_verräter_tagebuch,
+    layout=layout_nicely,
+    asp = 0,
+    edge.width= 3,
+    rescale = TRUE,
+    edge.curved = .10,
+    vertex.size = 5.0,
+    vertex.color = "grey",
+    vertex.color = "darkred",
+    vertex.frame.color = NA,
+    vertex.label.dist = 0.9,
+    vertex.label.degree = pi/2,
+    edge.lty = 1,
+    vertex.label.font = 1,
+    vertex.label.family = "Helvetica",
+    vertex.label.color = "black",
+    edge.size = size,
+     main="
+  Konflikpotenzial \n Leben in Amsterdam bis zum Untertauchen \n Februar 1934 - Juni 1942")
+
+```
+Im ersten Netzwerk, also der Zeit vor dem Hinterhaus, hatte Anne ein relativ großes soziales Umfeld. Die Beziehung zu ihren Klassenkameraden war überwiegend neutral, mit einigen verstand sie sich sehr gut und andere konnte sie nicht ausstehen. Vor allem mit Danka Zajde verstand Anne sich nicht gut und die beiden stritten häufig miteinander. Ebenso mit Maurice Coster und Robert Cohen kam es selten zu Konflikten. Ebenso geriet Anne einige Male an ihren Lehrer Herr Keesing, da sie zu viel während des Unterrichts mit ihren Klassenkameraden redete. Mit ihrer Familie verstand Anne sich vor dem Hinterhaus einigermaßen gut. Otto Frank, ihr Vater, war ihre größte Vertrauensperson zu dieser Zeit. Trotzdem kam es auch selten vor, dass sie sich mit ihm und ihrer Schwester Margot stritt. Das Verhältnis zwischen Anne und ihrer Mutter war zu diesem Zeitpunkt bereits angespannt und die beiden feindeten sich häufig gegenseitig an. Ansonsten sind in diesem Netzwerk keine weiteren Spannungen und Konfliktpotenziale zu erkennen.
+
+```{r Konfliktpotenzial im Zeitverlauf Teilnetzwerk 3,  fig.height=8, fig.width=12}
+
+
+
+konflikt3 <- subgraph.edges(af, E(af)[timedefinition==" 3"])
+konflikt3
+
+
+#Verräter sollen nicht angezeigt werden
+konflikt3_verräter <- delete.vertices(konflikt3, V(konflikt3)[verräter=="2"])
+konflikt3_verräter
+
+#Type 2 (Tagebuch) ausblenden
+konflikt3_verräter_tagebuch <- delete_vertices(konflikt3_verräter, V(konflikt3_verräter)[type=="2"]) 
+konflikt3_verräter_tagebuch
+                
+                
+#Farbzuweisung
+E(konflikt3_verräter_tagebuch)$konfliktpotenzial
+E(konflikt3_verräter_tagebuch )[E(konflikt3_verräter_tagebuch )$konfliktpotenzial == " 1"]$color <- "yellow"
+E(konflikt3_verräter_tagebuch )[E(konflikt3_verräter_tagebuch )$konfliktpotenzial == " 2"]$color <- "orange"
+E(konflikt3_verräter_tagebuch )[E(konflikt3_verräter_tagebuch )$konfliktpotenzial == " 3"]$color <- "red"
+E(konflikt3_verräter_tagebuch )[E(konflikt3_verräter_tagebuch )$konfliktpotenzial == " 4"]$color <- "dark red"
+E(konflikt3_verräter_tagebuch )[E(konflikt3_verräter_tagebuch)$konfliktpotenzial == "99"]$color <- "NA" 
+
+
+plot(konflikt3_verräter_tagebuch,
+    layout=layout_nicely,
+    asp = 0,
+    edge.width= 3,
+    rescale = TRUE,
+    edge.curved = .10,
+    vertex.size = 5.0,
+    vertex.color = "grey",
+    vertex.color = "darkred",
+    vertex.frame.color = NA,
+    vertex.label.dist = 0.9,
+    vertex.label.degree = pi/2,
+    edge.lty = 1,
+    vertex.label.font = 1,
+    vertex.label.family = "Helvetica",
+    vertex.label.color = "black",
+    edge.size = size,
+    main="
+    Konfliktpotenzial \n Hinterhaus Teil 1 \n Juli 1942 - Dezember 1942")
+
+
+```
+Das Konfliktpotenzial der Akteure während des ersten halbens Jahrs im Hinterhaus findet sich im zweiten Konfliktpotenzial-Netzwerk wieder. Während dieser Zeit verkleinerte sich das soziale Umfeld von Anne und ihrer Familie sehr stark. Vor allem mit den Helfern der Hinterhausbewohner entwickelte Anne bereits schnell ein ausgesprochen gutes Verhältnis. Sie berichtete nie in ihrem Tagebuch von Streitereien mit einem der Helfer. Im Hinterhaus entstanden hingegen immer mehr Spannungen: Anne trug vor allem häufige Konflikte mit Auguste van Pels aus, da diese häufig versuchte, Anne zu belehren und zu erziehen. Anne lies sich das nicht gerne gefallen und es endet oft in Streit. Edith und Otto Frank hatten benso kein gutes Verhältnis zu sich Auguste van Pels, wodurch es häufig zu Auseinandersetzungen zwischen ihnen kam. Otto versuchte dabei ab und zu seine Tochter Anne vor Auguste in Schutz zu nehmen. Auguste legte sich zusätzlich in dieser Zeit selten mit ihrem Mann Hermann van Pels an. Außerdem war das Verhältnis von Anne zu ihrer Mutter weiterhin sehr angespannt und die beiden trugen dies oft in Konflikten aus. 
+
+Annes Schwester Margot war stets ein sehr ruhiges Mädchen, die Konflikte eher mied. Daher stritten Anne und sie sehr selten. Zwischen Fritz Pfeffer und Anne kam es in der Anfangszeit nur selten zum Konflikt, da beide sich ein Zimmer teilten und den Schreibtisch gern für sich beanspruchen wollten. Deutlich wird bereits in diesem Zeitraum, dass sich die Streitigkeiten vermehren und sich die Konfliktpotenziale erhöhen. Dies könnte an der Anspannung der Hinterhausbewohner und der extremen Situation liegen, in der sich die Akteure plötzlich befinden.
+
+```{r Konfliktpotenzial im Zeitverlauf Teilnetzwerk 4,  fig.height=8, fig.width=12}
+
+
+konflikt4 <- subgraph.edges(af, E(af)[timedefinition==" 4"])
+konflikt4
+
+
+#Verräter sollen nicht angezeigt werden
+konflikt4_verräter <- delete.vertices(konflikt4, V(konflikt4)[verräter=="2"])
+konflikt4_verräter
+
+#Type 2 (Tagebuch) ausblenden
+konflikt4_verräter_tagebuch <- delete_vertices(konflikt4_verräter, V(konflikt4_verräter)[type=="2"]) 
+konflikt4_verräter_tagebuch
+                
+                
+#Farbzuweisung
+E(konflikt4_verräter_tagebuch)$konfliktpotenzial
+E(konflikt4_verräter_tagebuch )[E(konflikt4_verräter_tagebuch )$konfliktpotenzial == " 1"]$color <- "yellow"
+E(konflikt4_verräter_tagebuch )[E(konflikt4_verräter_tagebuch )$konfliktpotenzial == " 2"]$color <- "orange"
+E(konflikt4_verräter_tagebuch )[E(konflikt4_verräter_tagebuch )$konfliktpotenzial == " 3"]$color <- "red"
+E(konflikt4_verräter_tagebuch )[E(konflikt4_verräter_tagebuch )$konfliktpotenzial == " 4"]$color <- "dark red"
+E(konflikt4_verräter_tagebuch )[E(konflikt4_verräter_tagebuch)$konfliktpotenzial == "99"]$color <- "NA" 
+
+
+plot(konflikt4_verräter_tagebuch,
+    layout=layout_nicely,
+    asp = 0,
+    edge.width= 3,
+    rescale = TRUE,
+    edge.curved = .10,
+    vertex.size = 5.0,
+    vertex.color = "grey",
+    vertex.color = "darkred",
+    vertex.frame.color = NA,
+    vertex.label.dist = 0.9,
+    vertex.label.degree = pi/2,
+    edge.lty = 1,
+    vertex.label.font = 1,
+    vertex.label.family = "Helvetica",
+    vertex.label.color = "black",
+    edge.size = size,
+    main="
+    Konfliktpotenzial \n Hinterhaus Teil 2 \n Januar 1943 - Dezember 1943")
+
+```
+
+Das nächste Konfliktpotenzial-Netzwerk zeigt den Zeitraum von Januar 1943 bis Dezember 1943 (Timedefinition 4). In diesem Zeitraum zeigt sich eine Veränderung der Streitigkeiten und Konflikte zwischen den Akteuren im Hinterhaus. Die Beziehung von Anne und ihrer Mutter verbesserte sich in diesem Zeitabschnitt zunächst nicht und beide stritten immer noch sehr häufig. Ebenso hatten sich die Streitigkeiten zwischen Anne und ihrem Vater und zwischen Anne und ihrer Schwester Margot verstärkt: So gerieten Anne und Otto Frank selten und Anne mit Margot ab und zu aneinander. In diesem Zeitraum war Auguste van Pels weiterhin ein großer Streitfaktor im Hinterhaus:  Anne, Otto und Edith Frank diskutierten häufig mit ihr. Mittlerweile haben sich außerdem die Konflikte zwischen Fritz Pfeffer und Anne erhöht, die beiden feindeten sich gegenseitig an. Ebenfalls stritt Otto Frank ab und zu mit Fritz Pfeffer und verteidigte Anne weiterhin vor ihm. Edith Frank geriet ebenfalls ab und zu mit Fritz Pfeffer aneinander. Die Beziehung zwischen den verheirateten Paaren Otto und Edith Frank, sowie Auguste und Hermann van Pels schien in diesem Zeitraum ebenso langsam zu kippen. Während die Franks allerdings nur selten miteinander diskutierten, trugen die van Pels bereits häufig Konflikte zwischen einander aus. Hermann van Pels legte sich außerdem ab und zu mit Edith Frank und sehr selten mit Otto Frank und Anne an. Deutlich wird in diesem Netzwerk, dass nach einem Jahr des Zusammenlebens im Hinterhaus viel mehr Konfliktpotenzial zwischen den Akteuren herrscht.
+
+```{r Konfliktpotenzial im Zeitverlauf Teilnetzwerk 5,  fig.height=8, fig.width=12}
+
+
+konflikt5 <- subgraph.edges(af, E(af)[timedefinition==" 5"])
+konflikt5
+
+
+#Verräter sollen nicht angezeigt werden
+konflikt5_verräter <- delete.vertices(konflikt5, V(konflikt5)[verräter=="2"])
+konflikt5_verräter
+
+#Type 2 (Tagebuch) ausblenden
+konflikt5_verräter_tagebuch <- delete_vertices(konflikt5_verräter, V(konflikt5_verräter)[type=="2"]) 
+konflikt5_verräter_tagebuch
+                
+                
+#Farbzuweisung
+E(konflikt5_verräter_tagebuch)$konfliktpotenzial
+E(konflikt5_verräter_tagebuch)[E(konflikt5_verräter_tagebuch)$konfliktpotenzial == " 1"]$color <- "yellow"
+E(konflikt5_verräter_tagebuch)[E(konflikt5_verräter_tagebuch)$konfliktpotenzial == " 2"]$color <- "orange"
+E(konflikt5_verräter_tagebuch)[E(konflikt5_verräter_tagebuch)$konfliktpotenzial == " 3"]$color <- "red"
+E(konflikt5_verräter_tagebuch)[E(konflikt5_verräter_tagebuch)$konfliktpotenzial == " 4"]$color <- "dark red"
+E(konflikt5_verräter_tagebuch)[E(konflikt5_verräter_tagebuch)$konfliktpotenzial == "99"]$color <- "NA" 
+
+
+plot(konflikt5_verräter_tagebuch,
+    layout=layout_nicely,
+    asp = 0,
+    edge.width= 3,
+    rescale = TRUE,
+    edge.curved = .10,
+    vertex.size = 5.0,
+    vertex.color = "grey",
+    vertex.color = "darkred",
+    vertex.frame.color = NA,
+    vertex.label.dist = 0.9,
+    vertex.label.degree = pi/2,
+    edge.lty = 1,
+    vertex.label.font = 1,
+    vertex.label.family = "Helvetica",
+    vertex.label.color = "black",
+    edge.size = size,
+    main="
+    Konfliktpotenzial \n Das letzte Jahr im Hinterhaus \n Januar 1944 - August 1944")
+
+```
+
+Das letzte Konfliktpotenzial-Netzwerk, dass in dieser Forschungsarbeit betrachtet wird, zeigt den Zeitraum von Januar 1944 bis zum Auffliegen der Hinterhausbewohner im August 1944 (Timedefinition 5). In diesem Zeitraum verstärkten sich die Konflikte im Vergleich zu dem vorherigen Zeitabschnitt noch weiter. Die Beziehung zwischen Anne und ihrem Vater wird immer konfliktbelasteter, die beiden stritten mittlerweile ab und zu miteinander, während das im vorherigen Netzwerk nur selten und davor nie der Fall war. Zwischen Anne und ihrer Mutter veränderte sich allerdings nicht viel: Die beiden trugen weiterhin häufig Konflikte aus und entfremdeten sich immer weiter voneinader. 
+Mit ihrer Schwester Margot stritt Anne weiterhin ab und zu. Genauso vermehrten sich die Konflikte zwischen Anne und Hermann van Pels. Im Jahr 1943 stritten die beiden nur selten, 1944 häuften sich die Konflikte. Die Stimmung zwischen Anne und Hermanns Frau Auguste van Pels verbesserte sich während 1944 sogar: Die beiden stritten nur noch ab und zu miteinander. Genauso hat sich das Konfliktpotenzial zwischen Fritz Pfeffer und Anne verkleinert. Hier wurden nur noch ab und zu Konflikte ausgetragen. Otto Frank war eigentlich ein recht ruhiger Mensch, trotzdem haben sich seine Konfliktpotenziale in diesem Zeitraum mit einigen Akteuren erhöht. So diskutierte er mit Margot selten, mit Auguste und Hermann van Pels und Fritz Pfeffer bereits ab und zu. Nach einem ähnlichen Muster verstärkten sich auch die konfliktbelasteten Beziehungen von Edith Frank. Sie stritt ebenfalls selten mit Margot, dafür aber häufig mit Auguste  und Herman van Pels und ab und zu mit Fritz Pfeffer. Auguste van Pels verstand sich in diesem Zeitraum ebenfalls nur bedingt mit Fritz Pfeffer: die beiden konfrontierten sich ab und zu. In der Ehe zwischen Auguste und Hermann van Pels kriselte es ebenfalls: die beiden stritten mittlerweile häufig miteinander. Hermann hat ebenso ein angespanntes Verhältnis zu Fritz Pfeffer, sowie zu seinem Sohn Peter, mit denen er in diesem Zeitraum ab und zu aneinander geriet. Peter van Pels stritt sich allerdings nicht nur mit seinem Vater. Seine Mutter und er trugen ebenfalls ab und zu Konflikte aus. Zusätzlich diskutierte er sich in diesem Zeitraum ebenfalls ab und zu mit Fritz Pfeffer. Peter van Pels hatte während der Anfangszeit im Hinterhaus kaum Konflikte mit anderen Hinterhausbewohnern, da er sich in seinem eigenen Zimmer unter dem Dach zurückziehen und aus allem raushalten konnte. Im Jahr 1944 kam er Anne näher und damit veränderten sich ebenfalls seine Beziehungen zu den anderen Hinterhausbewohnern, die die Beziehung der beiden teilweise nicht gut hießen oder kritisierten.
+
+Durch das Betrachten des Wertes “Konfliktpotenzial und neben dem Wert “Weight” lässt sich der Wandel der Beziehungen zwischen den Akteuren beobachten. Geschuldet durch die Extremsituation, in der sich die Hinterhausbewohner befanden und das enge Zusammenleben im Versteck, maximierten sich die Konflikte mit der Zeit. Deutlich sichtbar ist, dass im ersten betrachteten Zeitraum weniger Streitpotenzial zwischen den Akteuren herrscht und die Hinterhausbewohner sich besser miteinander arrangieren konnten. Die Bewohner hatten kaum eine Privatsphäre und konnten sich nicht zurückziehen, was häufig zu Konfrontationen führte. Selbst bei den eher ruhigeren Mitbewohnern kochten daher die Emotionen hoch. Da Annes Sozialleben sich dermaßen in der Zeit im Hinterhaus verkleinerte, war ihr einziger Rückzugsort ihr Tagebuch. Hier schrieb sie häufig über die Streitigkeiten zwischen den Akteuren oder hielt ihre Emotionen fest, um einer Konfrontation manchmal aus dem Weg gehen zu können. Damit fehlte natürlich auch der Austausch mit Gleichaltrigen und Anne konnte mit niemandem über ihre Emotionen sprechen. Außerdem befand sie sich in der Pubertät, was womöglich ebenso zu Stimmungsschwankungen und Launenhaftigkeit führte und damit Konflikte noch weiter begünstigte.
+
+
+## Netzwerke zum Todeszeitraum der Akteure
+
+*Todeszeitraum in Korrelation zu den Weltkriegen*
+
+- 1 = vor dem Ersten Weltkrieg verstorben
+- 2 = während des Ersten Weltkriegs verstorben
+- 3 = gestorben zwischen dem Ende des 1. Weltkrieg und Anfang 2. Weltkrieg
+- 4 = während des Zweiten Weltkriegs verstorben
+- 5 = unabhängig des Zweiten Weltkriegs nach 1945 verstorben
+- 6 = lebt bis zur Erstellung dieses Netzwerks (2020)
+
+```{r Todeszeitraum Gesamtnetzwerk, fig.height=10, fig.width=16}
+
+#Vor dem Ersten Weltkrieg verstorben
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net)[V(survival_net)$type == 1]$shape <- "circle"
+V(survival_net)[V(survival_net)$type == 2]$shape <- "square"
+
+
+#Vor dem Ersten Weltkrieg verstorben
+vertex.attributes(af)$survival
+V(survival_net)[V(survival_net)$survival=="1"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+plot( 
+  survival_net,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Vor dem Ersten Weltkrieg verstorben",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+#Während des Ersten Weltkriegs verstorben
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net2 <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net2
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net2)[V(survival_net2)$type == 1]$shape <- "circle"
+V(survival_net2)[V(survival_net2)$type == 2]$shape <- "square"
+
+vertex.attributes(af)$survival
+V(survival_net2)[V(survival_net)$survival=="1"]$color <- "grey"
+V(survival_net2)[V(survival_net2)$survival=="2"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+plot( 
+  survival_net2,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Während des Ersten Weltkriegs verstorben",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+#Gestorben zwischen dem Ende des 1. Weltkrieg und Anfang 2. Weltkrieg
+
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net3 <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net3
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net3)[V(survival_net3)$type == 1]$shape <- "circle"
+V(survival_net3)[V(survival_net3)$type == 2]$shape <- "square"
+
+vertex.attributes(af)$survival
+
+V(survival_net3)[V(survival_net3)$survival=="1"]$color <- "grey"
+V(survival_net3)[V(survival_net3)$survival=="2"]$color <- "grey"
+V(survival_net3)[V(survival_net3)$survival=="3"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+
+plot( 
+  survival_net3,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Gestorben zwischen Ende 1. Weltkrieg und Anfang 2. Weltkrieg",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+
+
+#Während des Zweiten Weltkriegs verstorben
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net4 <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net4
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net4)[V(survival_net4)$type == 1]$shape <- "circle"
+V(survival_net4)[V(survival_net4)$type == 2]$shape <- "square"
+
+vertex.attributes(af)$survival
+
+V(survival_net4)[V(survival_net)$survival=="1"]$color <- "grey"
+V(survival_net4)[V(survival_net4)$survival=="2"]$color <- "grey"
+V(survival_net4)[V(survival_net4)$survival=="3"]$color <- "grey"
+V(survival_net4)[V(survival_net4)$survival=="4"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+plot( 
+  survival_net4,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Während des Zweiten Weltkriegs verstorben",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+
+#Unabhängig des Zweiten Weltkriegs nach 1945 verstorben
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net5 <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net5
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net5)[V(survival_net5)$type == 1]$shape <- "circle"
+V(survival_net5)[V(survival_net5)$type == 2]$shape <- "square"
+
+vertex.attributes(af)$survival
+V(survival_net5)[V(survival_net)$survival=="1"]$color <- "grey"
+V(survival_net5)[V(survival_net5)$survival=="2"]$color <- "grey"
+V(survival_net5)[V(survival_net5)$survival=="3"]$color <- "grey"
+V(survival_net5)[V(survival_net5)$survival=="4"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+plot( 
+  survival_net5,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Unabhängig des Zweiten Weltkriegs nach 1945 verstorben",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+
+
+#Lebt bis zur Erstellung dieses Netzwerks (2020)
+
+#Alle Knoten ausblenden, die keine Definition zum Todeszeitraum haben
+survival_net6 <- delete_vertices(af_time, V(af_time)[survival=="99"])
+survival_net6
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(survival_net6)[V(survival_net6)$type == 1]$shape <- "circle"
+V(survival_net6)[V(survival_net6)$type == 2]$shape <- "square"
+
+vertex.attributes(af)$survival
+V(survival_net6)[V(survival_net)$survival=="1"]$color <- "grey"
+V(survival_net6)[V(survival_net6)$survival=="2"]$color <- "grey"
+V(survival_net6)[V(survival_net6)$survival=="3"]$color <- "grey"
+V(survival_net6)[V(survival_net6)$survival=="4"]$color <- "grey"
+V(survival_net6)[V(survival_net6)$survival=="5"]$color <- "grey"
+
+
+vertex.attributes(af_time)$religion
+V(af_time)[V(af_time)$religion=="1"]$color <- "yellow"
+V(af_time)[V(af_time)$religion=="2"]$color <- "blue"
+V(af_time)[V(af_time)$religion=="99"]$color <- "darkred"
+
+
+plot( 
+  survival_net6,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 3.5,
+  vertex.frame.color = NA,
+  main = "Lebende Akteure bis zur Erstellung dieses Netzwerks (2020)",
+  sub = "grau = gestorben, gelb = Juden, blau = Christen",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+
+
+```
+
+Um den zeitlichen Verlauf der verstorbenen Menschen anzuzeigen, wurden zudem sechs Teilnetzwerke mit allen jüdischen und christlichen Akteuren des Gesamtnetzwerkes inklusive dem Tagebuch Kitty visualisiert. Die Knoten, denen wir keine Religion zuweisen konnten, wurden nicht abgebildet. Jüdische Akteure wurden gelb eingefärbt, christliche blau und bereits verstorbenen Akteuren wurde die Farbe grau zugewiesen. Für die Darstellung des zeitlichen Verlaufes bot sich die Definition über das Node-Attribut “Survival” an. Dementsprechend fand eine Aufteilung in Folgende Zeitabschnitte statt: vor dem ersten Weltkrieg verstorben (1), während des ersten Weltkrieges verstorben (2), gestorben zwischen dem Ende des ersten Weltkrieges und Anfang des zweiten Weltkrieges (3), während des zweiten Weltkrieges verstorben (4), unabhängig des zweiten Weltkrieges nach 1945 verstorben (5), lebt bis zur Erstellung dieses Netzwerkes im Jahr 2020 (6). 
+Bei der Betrachtung der sechs verschiedenen Teilnetzwerke lässt sich zunächst anmerken, dass sich das Umfeld von Anne Frank aus deutliche mehr jüdischen als christlichen Akteuren zusammensetzte. 56 Akteure gehörten demnach dem Judentum an, nur 12 Akteure hingegen dem Christentum.
+
+Als auffällig lässt sich vor allem der Vergleich des dritten und vierten Teilnetzwerkes beschreiben. Während im Teilnetzwerk drei nur wenige Akteure grau eingefärbt, also verstorben, sind, erhöht sich diese Zahl im Teilnetzwerk vier. Anhand der Visualisierung lässt sich gut erkennen, dass es sich bei den Akteuren, die während des Zweiten Weltkrieges verstorben sind, hauptsächlich um Juden handelt. Der Nationalsozialismus und die vielen Todesfälle durch den Holocaust lassen sich besonders durch dieses Teilnetzwerk gut nachvollziehen. Nur einige wenige Juden konnten einer Vergasung oder einer anderweitigen brutalen Tötung entkommen. 
+
+
+
+## Netzwerk potenzieller Verräter
+
+
+```{r Potenzielle Verräter im Gesamtnetzwerk, fig.height=13, fig.width=16}
+
+
+verräter_net <- af_time
+verräter_net
+
+# Zuweisungen für das Two-Mode Netzwerk
+V(verräter_net)[V(verräter_net)$type == 1]$shape <- "circle"
+V(verräter_net)[V(verräter_net)$type == 2]$shape <- "square"
+
+V(verräter_net)[V(verräter_net)$verräter=="1"]$color <- "grey"
+V(verräter_net)[V(verräter_net)$verräter=="2"]$color <- "red"
+
+plot( 
+  verräter_net,
+  asp = 0,
+  rescale = TRUE,
+  layout = layout_nicely,
+  edge.curved = .15,
+  vertex.size = 5,
+  vertex.frame.color = NA,
+  main = "Gesamtnetzwerk mit potenziellen Verrätern",
+  sub = "rot = potenzielle Verräter",
+  vertex.label.dist = 0.6,
+  edge.lty = 1, 
+  vertex.label.family = "Helvetica",
+  vertex.label.color = "black",
+  vertex.label.font = 1,
+  vertex.label.degree = pi/2,
+  edge.color = gray(0.6, alpha=0.9))
+```
+
+
+Bis heute ist ungeklärt, ob die Bewohner des Hinterhauses am 04. August 1944 wirklich an die Nationalsozialisten verraten worden sind. Gerade deshalb wollte das Team ein zusätzliches Netzwerk generieren, das potenzielle Verräter auf Grundlage der Recherche kenntlich macht. Problematisch bei der Recherche war für vor allem, dass es keine amtlichen Dokumente mehr über den Polizeieinsatz in der Prinsengracht gibt. Fakt ist, dass am 4. August die Nationalisten Karl Silberbauer, Gezinus Gringhuis und Willem Grootendorst an der Verhaftung der Juden beteiligt waren.
+
+
+```{r Anzahl der Verräter}
+
+verräter_anzahl <- V(af_time)[V(af_time)$verräter == "2"]
+verräter_anzahl
+
+```
+
+In diesem Netzwerk gibt es 14 potenzielle Verräter. Gelistet sind auch zwei Einbrecher, deren Identität nach wie vor nicht geklärt werden konnte. Es wäre möglich, dass die Einbrecher die Bewohner bemerkt haben könnten. Den ersten Einbrecher haben die Hinterhausbewohner selbst nicht bemerkt. Der zweite Täter wurde zwar von einigen Hinterhausbewohnern kurz gesehen, jedoch nicht erkannt. Der zweite Einbrecher hat vermutlich nicht einmal geahnt, dass er beobachtet wird, da er von einer menschenleeren Firma ausging, um den Einbruch auszuführen. Die offizielle Webseite des Anne Frank Hauses spricht auch von einem potenziellen Anruf durch den Lagerarbeiter Willem van Maaren an die Polizei, indem er die Hinterhausbewohner verraten haben könnte. Das könnte prinzipiell möglich sein, jedoch war die Infrastruktur zu diesem Zeitpunkt bereits so zerstört, dass ein gewöhnliches Telefonat nicht so einfach zurück zu verfolgen war. Ohne Willem van Maaren direkt zu kennen, spricht Anne Frank in ihrem Tagebuch ihm negative Eigenschaften zu. Die Helfenden und Otto Frank zeigten ihn nach dem Krieg im Jahr 1947 beim Politischen Fahndungsdienst an, das Verfahren wurde jedoch wegen mangelnden Beweisen eingestellt. Des Weiteren kommt auch für das Anne Frank Haus der Akteur Tonny Ahlers für den Verrat in Betracht. Er war überzeugter Nationalsozialist und soll in einem Gespräch vernommen haben, dass Otto Frank sich negativ über die Chancen eines Sieges der deutschen Besatzer geäußert haben soll. Er soll daraufhin Geld von Otto Frank erpresst haben. Unklar ist, ob er wirklich wusste, dass sich zwei Familien im Hinterhaus versteckt hielten. Fakt ist jedoch, dass sich Ahlers und die drei Nationalsozialisten, die die Verhaftung unter anderem durchführten, kannten.
+Fritz Pfeffer kam nach seiner Scheidung mit Charlotte Kaletta zusammen und unterhielt während der Zeit im Hinterhaus eine rege Brieffreundschaft zu ihr . Einer der Briefe könnte durchaus in falsche Hände geraten sein und somit zum Verrat geführt haben. Zudem arbeitete der Ehemann von Lena Hartog illegal in der Firma von Otto Frank. Geklärt ist, dass dieser mit seiner Gattin über die Versteckten im Hinterhaus redete. Unklar ist nur, ob dies vor oder nach dem 4. August 1944 geschah. Sie wusste also über die Umstände im Hinterhaus Bescheid, nur konnte nicht bewiesen werden, ob Sie vor dem 4. August bereits über dieses Wissen verfügte und dadurch die Polizei hätte alarmieren können. Selbstverständlich kommt auch ihr Ehegatte Lammert Hartog als Verräter in Frage. Er arbeitete zum Zeitpunkt der Verhaftung selbst im Lager.
+
+Die Jüdin Ans van Dijk wurde als Untergetauchte verhaftet und wurde dazu gezwungen, andere Juden zu verraten. Van Dijk könnte laut des Journalisten Sytze van der Zee Kontakt zu einem Nachtwächter in der Prinsengracht gehabt haben, der den ersten Einbruch im Haus entdeckt hatte und eventuell etwas von den Bewohnern im Hinterhaus mitbekommen haben könnte. Bewiesen werden konnte das bis heute nicht. Sie wurde aber dennoch in das potenzielle Verräternetzwerk mit aufgenommen. Der Verlobte von Bep Voskuijl, Bertus Hulsman, wusste 25 Monate nichts über die Versteckten im Hinterhaus, war aber in der Firma und hätte die Hinterhausbewohner bemerken und hören können. Deshalb ist auch er gelistet.
+
+Miep Gies erhielt bei dem Gemüsehändler Hendrik van Hoeve Lebensmittel für das Hinterhaus. Fakt ist, dass er selbst Juden bei sich versteckte hielt. Unklar ist, ob er über die Umstände im Hinterhaus Bescheid wusste. Zu guter Letzt wurde der Kartoffelhändler mit in das Verräternetzwerk aufgenommen. Über die Bewohner im Hinterhaus wusste er nicht Bescheid, es wird aber vermutet, dass er durchaus etwas geahnt haben könnte. 
+Bezugnehmend auf unsere Annahme, dass Anne Frank verraten worden ist, lässt sich unsere Hypothese f) auch durch intensive Recherche weder verifizieren noch falsifizieren.  
+
+
+# Diskussion: Fazit, Limitationen und Ausblick
+
+
+## Fazit
+
+Ziel der vorliegenden Forschungsarbeit war es, das soziale Umfeld der Anne Frank mithilfe der Methoden der Netzwerkanalyse zu rekonstruieren. Daraus erschlossen sich weitreichende Erkenntnisse über die Auswirkungen des Aufenthalts im Hinterhaus auf ihr Leben und ihre sozialen Beziehungen. Die durchgeführte Analyse beantwortet die aufgeworfene Forschungsfrage dahingehend, dass sich das soziale Umfeld von Anne Frank durch die häusliche Isolation stark minimierte und einen entscheidenden Einschnitt in ihrem Leben darstellte.
+Konkretisiert wird dieses Ergebnis durch die Beantwortung der zuvor definierten Arbeitshypothesen, die sich wie folgt zusammenfassen lassen:
+Ausgehend von der beschriebenen Verringerung der sozialen Kontakte veränderte sich die Intensität einzelner Beziehungen. So entwickelten sich im Rahmen der Hinterhauszeit starke Verbindungen, die zuvor kaum oder gar nicht existent waren. Die Untersuchung der familiären Beziehungen ergab dagegen eine differenzierte Erkenntnis. Belegt wurde, dass die Ausnahmesituation im Hinterhaus Auswirkungen auf einzelne Verhältnisse hatte und sich im Rahmen steigender Konfliktsituationen äußerten. Anne konnte die positive Beziehung zu ihrem Vater Otto weitestgehend aufrechterhalten, das Verhältnis zu ihrer Mutter Edith verschlechterte sich jedoch mit der anhaltenden räumlichen Nähe.
+Es war davon auszugehen, dass die einzelnen Bewohner des Hinterhauses sowie die Helfer bereits vor dem Untertauchen eine gewisse Verbindung zueinander besaßen. Die Netzwerkanalyse hat jedoch bewiesen, dass nicht alle Bewohner zuvor eine intensive Beziehung pflegten, wie es das damit verbundene Risiko und die Hilfsbereitschaft vermuten lassen würden. Als entscheidender Akteur im Rahmen der Entstehung des Hinterhauses kristallisierte sich Otto Frank heraus, der als einziger Verbindungen zu allen Hinterhausbewohnern und Helfern besaß und damit innerhalb des Netzwerks eine entscheidende Broker-Position einnimmt. Das Helfernetzwerk widerlegte zusätzlich die Annahme, dass es eine Vielzahl an Unterstützer benötigt, um insgesamt acht Juden vor dem Nationalsozialismus in Form eines Verstecks zu beschützen. Tatsächlich zählt das entsprechende Netzwerk nur sechs Helfer, was angesichts der damit verbundenen Aufgaben und des organisatorischen Aufwands als gering bewertet werden kann.  
+
+Insgesamt zeigt die Netzwerkanalyse auf, dass sich das soziale Umfeld von Anne Frank nicht nur durch den Umzug in das Hinterhaus stark reduzierte, sondern die Schrecken des Kriegs auch weitreichende Beziehungen von ihr auslöschte. 
+
+## Limitationen 
+ 
+Zunächst gestaltete sich der Zugang zu historischen Quellen über das Leben und die sozialen Beziehungen von Anne Frank als Herausforderung. Auch die Tatsache, dass in verschiedenen Quellen teilweise unterschiedliche Aussagen über Verbindungen und Beziehungen getroffen wurden, war eine Schwierigkeit, die es zu bewältigen galt. Dabei war es wichtig, einen sinnvollen Wert für die jeweiligen Attribute zu wählen. Um vielfältige Recherchequellen vorweisen zu können, wäre ein Interview mit der Stiefschwester von Anne Frank, Eva Schloss, sicherlich eine Bereicherung für unsere Forschungsarbeit gewesen. Aufgrund einer Absage konnte dieses leider nicht realisiert werden. Da für die Beantwortung der Forschungsfrage ein ungerichtetes Netzwerk gewählt wurde, konnten für die Interpretation nicht alle Netzwerk- und Akteursmaße verwendet werden. Einige Maße lassen sich ausschließlich bei gerichteten Netzwerken anwenden und interpretieren. Eine weitere Einschränkung musste dahingehend gemacht werden, dass bei der Visualisierung der Netzwerke nur Annes Umfeld dargestellt wurde, da sie als einzige ihre Gedanken in einem Tagebuch aufschrieb. Hierbei handelt es sich um eine subjektive Wahrnehmung und Berichterstattung von Anne. Die Betrachtung und Analyse weiterer Akteure aus dem Hinterhaus wäre mit Sicherheit interessant gewesen, hätte allerdings den zeitlichen Rahmen gesprengt. Daher ist eine weitreichende Schlussfolgerung aus unterschiedlichen Perspektiven nicht möglich gewesen. Es lässt sich lediglich annehmen, dass sich die sozialen Kontakte auch bei den übrigen Hinterhausbewohnern während der Zeit im Hinterhaus stark reduzierten.
+
+Bei der Analyse und Interpretation des Verräternetzwerkes lässt sich leider auch nach intensiver Recherche keine eindeutige Aussage darüber treffen, ob die Bewohner des Hinterhauses verraten wurden und wer der entscheidende Verräter war. Das Verräternetzwerk zeigt lediglich alle potentiellen Verräter des Hinterhauses auf. Auch die Darstellung eines geografischen Teilnetzwerkes ließ sich leider nicht realisieren. In diesem Netzwerk sollten die verschiedenen Deportationsorte der Hinterhausbewohner mithilfe einer Landkarte dargestellt werden. Die Umsetzung des geografischen Netzwerkes überstieg dabei trotz einer intensiven Einarbeitung in RStudio unsere Kompetenzen.
+
+## Ausblick
+
+Neben der Geschichte von Anne Frank gab es zahlreiche ähnliche Schicksale von versteckten Juden während des Zweiten Weltkriegs. Nicht nur Anne Frank führte in der Zeit des Krieges Tagebuch. Viele andere jüdische Jugendliche schrieben ebenfalls über ihr Leben und ihre Gefühle in dieser schwierigen Zeit. Mittlerweile sind mehr als 75 Tagebücher junger Menschen aus den Trümmerhaufen des Holocaust aufgetaucht. Trotzdem konnte im vorliegenden Forschungsbericht nur auf das Schicksal von Anne Frank eingegangen werden. Annes Geschichte macht auch heute noch zahlreichen Menschen in schwierigen Situationen auf der ganzen Welt Mut und berührt sie. Ihr Schicksal wird in der Zukunft wahrscheinlich noch genauer erforscht werden und die Hintergründe um ihre Entdeckung näher beleuchtet werden. Derzeit arbeitet ein Team unterschiedlichster Fachexperten um den pensionierten FBI-Agenten Vince Pancoke an der Aufklärung der Umstände um die Entdeckung des Hinterhauses. Das Team möchte in seinem “Cold Case Diary” mit neuen Forschungsmethoden neue Erkenntnisse sammeln und alle bisherigen Vermutungen, Beweisstücke und Archive nochmals unter die Lupe nehmen. Möglicherweise kann so in näherer Zukunft geklärt werden, wie die Familie Frank damals entdeckt wurde, wer der Verräter war oder ob es sich damals ausschließlich um einen Zufall handelte.
+
+
+# Team, Arbeitsaufwand und Lessons Learned
+
+Dem Team war von Anfang an wichtig, klar zu kommunizieren, was der Anspruch dieser Netzwerkanalyse sein sollte. Man wollten eine präzise und saubere Datenerhebung für unser Projekt, was eine umso genauere Arbeitsweise von jedem einzelnen erforderte. Eine klare Kommunikation im Team war sicherlich ein Schlüsselelement der Projektarbeit. Vor allem bei anfänglichen Problemen mit der Datenbereinigung war das Team auf einen gegenseitigen Austausch angewiesen. Basis dafür bildete das Codebuch. Fragen und Einzelheiten des Codebuchs wurden also bereits  in der Projektphase sehr früh geklärt und bei Bedarf immer wieder ergänzt und erneut an alle kommuniziert. Schwierig war zu Beginn vor allem die Aktualität unterschiedlicher Dokumente gerade was die verschiedenen Listen innerhalb des Codebuchs angingen. Das wurde relativ früh im Team besprochen, analysiert und eine einheitliche Lösung dafür gefunden. Als kommunikative Plattform außerhalb der Hochschule entschieden wir uns für die Google Drive Plattform und zusätzlich WhatsApp. Hier konnten wir Dokumente schnell hochladen, austauschen und bearbeiten. Alle Teammeetings wurden über die Plattform WhatsApp vereinbart. 
+
+Herausfordernd war für uns alle sicherlich der Zeitpunkt der Corona-Pandemie. Treffen an der Hochschule waren so nicht mehr realisierbar. Gerade die Möglichkeit, zwischen den Vorlesungen etwas kurz mit dem Team anzusprechen, gab in diesem Zeitraum nicht mehr. Um weiterhin in Kontakt zu bleiben, mussten wir unsere Gruppenbesprechungen während der Corona-Pandemie online durchführen. Die Gruppe entschied sich hierbei für Zoom. So gab es die Möglichkeit, Informationen virtuell schnell und einfach auszutauschen. Als organisatorisches Tool verwendeten wir ein Trello Board, um Aufgaben klar einteilen zu können und einen Überblick über die Deadlines zu haben. Trello diente auch als kollaborative Plattform. Verständlicherweise ist das Projekt Anfang April kurz ins Stocken geraten, da viele die Situation durch Corona erst einmal neu bewerten werden mussten und Unsicherheiten bestanden, wie sich jetzt Abgaben und Deadlines verschieben. Grund dafür war auch der Entfall des Blockseminars. Das Team bereitete sich intensiv auf diese drei Tage vor, um Fragen bezüglich unseres Netzwerkes dort direkt klären zu können. Die Problemschilderung via E-Mail gestaltete sich als deutlich schwieriger und zeitaufwändiger, aber dennoch machbar. Die Motivation für das Projekt ging dennoch nicht verloren, ganz im Gegenteil. Unsere gemeinsame Reise nach Amsterdam führte uns das Thema noch stärker vor Augen und synchronisierte unser Ziel, Anne Franks Leben zu analysieren und die Zusammenhänge und Beziehungen zu verstehen.
+
+Selbstverständlich gab es bei der Datenerhebung auch Widersprüchlichkeiten oder Ungenauigkeiten, beispielsweise. die Quellenlage, die aber gemeinsam im Team besprochen werden konnten. Das Team charakterisierte sich bereits von Anfang an durch eine eindeutige Aufgabenverteilung für die Teammitglieder. Klarheit und Fairness waren die Basis für die Zusammenarbeit.Das Arbeitsklima in der Gruppe gestaltete sich positiv. Bei Über- oder Unterforderung wurde gemeinsam eine Lösung gefunden, was auch den Teamgeist ungemein stärkte. Das betraf sowohl die Organisation der Exkursion nach Amsterdam, die Recherche, die Datenerhebung, die Analyse, die Interpretation, sowie das Schreiben des Forschungs- und des Redaktionsberichts.Es war der Gruppe wichtig, historisch wertvolles Material aufzuarbeiten, das auch den qualitativen Ansprüchen gerecht wurde. Das Thema Anne Frank ist ein Paradebeispiel für „Qualität oder Quantität“. Es gibt Quellen und Berichte im Überfluss, gerade zu der Zeit im Hinterhaus. Viele dieser Quellen erschienen aber weder professionell noch geeignet für die Forschungsarbeit. Seriöse von unseriösen Quellen zu unterscheiden, gestaltete sich als Herausforderung, da der Anspruch auf Qualität umgesetzt werden sollte.
+
+Zu Beginn der Datenerhebung entstand etwas Unruhe in der Gruppe, da einige Teams bereits deutlich mehr Daten erhoben hatten als unser Team. Das wurde im Plenum diskutiert und führte zu folgenden Schlussfolgerungen: Die Gruppe lässt sich von der Menge der anderen Datensätze nicht beeinflussen, denn jedes Thema hat unterschiedliche Voraussetzung und eine völlig andere Quellen- und Datengrundlage. Man hatte selbst den Anspruch, so viele qualitative Quellen wie möglich mit einzubeziehen. Unser Team charakterisierte sich durch einen freundlichen und produktiven Umgang miteinander. Deadlines wurden grundsätzlich ohne Diskussion eingehalten. Entscheidende Grundlage für die ausgezeichnete Zusammenarbeit war am Ende sicherlich das Interesse und die persönliche Motivation jedes einzelnen Teammitgliedes für das Thema rund um Anne Frank.
+
+Flexibilität, Teamgeist, Kompromissbereitschaft, Zeitmanagement und den Sinn von Feedbackschleifen waren Kompetenzen, die die Gruppe aus dem Projekt mitnahm. Das Team hat vor allem gegen Ende sehr viele kurzfristige Termine gebraucht, um zügig noch letzte Feinheiten abzustimmen. Im Vergleich zu anderen Projekten in unserem Studium gestaltete sich die Netzwerkanalyse als sehr zeitintensiv und forderte gerade deshalb auch die intensive Mitarbeit jedes einzelnen Teammitgliedes. In Gruppenarbeiten geht es um Dialog- und Kompromissbereitschaft, um auf den richtigen Konsens zu kommen. Durch das digitale Semester wurde uns bewusst, wie wichtig Zeitmanagement in Verbindung mit einer Agenda ist. Gerade in den Meetings gab sie dem Team einen Leitfaden und eine Struktur, ohne das zeitliche Limit völlig auszureizen. 
+
+Als “Most Valuable Player” lässt sich Julia Gehringer nominieren. Ihren Ehrgeiz in RStudio ist besonders hervorzuheben, gerade in der Phase der Visualisierung der Netzwerke. Abgesehen davon trug selbstverständlich jedes einzelne Mitglied des Teams einen wertvollen Teil zum Gesamtergebnis bei. Der Arbeitsaufwand über das gesamte Semester verteilt beträgt inklusive der Vorlesungen ca. 180 Arbeitsstunden pro Gruppenmitglied. Da es der Anspruch der Gruppe war, qualitativ einwandfreie und fundierte Netzwerke einzureichen, mussten wir vor allem gegen Ende unsere zeitlichen Ressourcen weit ausdehnen.
+
+## Teammitglieder
+
+Sandra Belschner
+Celine Bischoff
+Julia Gehringer
+Kai Roos
+Luisa Scheurer
+Theresa Stumpf
+
+### Arbeitsaufwand und Rollen im Team
+
+Sandra Belschner: Datenbereinigung, Edit Artikel, ca. 110 Stunden
+Celine Bischoff: Literaturrecherche, Datenerhebung, Forschungsbericht, ca. 160 Stunden
+Julia Gehringer: RStudio, Datenbereinigung, Datenvisualsierung, Coding, ca. 180 Stunden
+Kai Roos: Literaturrecherche, Datenerhebung, Forschungsbericht, ca. 160 Stunden
+Luisa Scheurer: Literaturrecherche, Datenerhebung, Forschungsbericht, ca. 160 Stunden
+Theresa Stumpf: Literaturrecherche, Datenerhebung, Forschungsbericht, Edit, ca. 160 Stunden
+
+# Codebuch
+[Codebuch](https://github.com/AnneFrank2020/Anne_Frank_Netzwerk/blob/master/Abgabe/codebuch.md)
+
+
+```{r Übersicht Netzwerkattribute}
+list.vertex.attributes(af)
+# vertex.attributes(af)
+
+list.edge.attributes(af)
+# edge.attributes(af)
+```
+
+
+# Datenmaterial und Skript
+[Datensatz](https://github.com/AnneFrank2020/Anne_Frank_Netzwerk/tree/master/Abgabe)
+
+
+# Literaturverzeichnis
+
+Baur, N. (2014). Netzwerkdaten. In: Nina Baur und Jörg Blasius (Hg.): Handbuch Methoden der empirischen Sozialforschung. Wiesbaden: Springer VS, S. 941–958.
+
+Buchanan, M. (2002). Small worlds. Das Universum ist zu klein für Zufälle: Spannende Einblicke in die Komplexitätstheorie. Frankfurt am Main: Campus-Verl.
+
+Center of History and Economics. (2020). Visualizing Historical Networks. Abgerufen am 16. Juni 2020, von Visualizing Historical Networks website: https://sites.fas.harvard.edu/~histecon/visualizing/index.html
+
+Clement, R. & Schreiber, D. (2013). Soziale Netzwerke und Social Media-Technologien. In: Reiner Clement und Dirk Schreiber (Hg.): Internet-Ökonomie. Grundlagen und Fallbeispiele der vernetzten Wirtschaft. (2., vollst. überarb. und erw. Aufl.). (S. 395–461). Berlin: Springer Gabler.
+
+Cold Case Diary. (o. J.). Abgerufen am 18. Juni 2020, von der Cold Case Diary Webseite:  https://www.coldcasediary.com
+Düring, M. &  Keyserlingk, L. (2015). 
+
+Netzwerkanalyse in den Geschichtswissenschaften. Historische Netzwerkanalyse als Methode für die Erforschung von historischen Prozessen. In R. Schützeichel & S. Jordan (Hg.): Prozesse. (S. 337–350). Wiesbaden: Springer Fachmedien. 
+
+Düring, M. (2015). Verdeckte Soziale Netzwerke Im Nationalsozialismus. Berliner Hilfsnetzwerke Für Verfolgte Juden. Berlin: De Gruyter. 
+
+Frank, A. (2015). Anne Frank Tagebuch (23., um einen Anhang erweiterte Aufl.; M. Pressler, Übers.). Frankfurt am Main: Fischer Taschenbuch. (Originalwerk veröffentlicht 1947).
+
+Frieling, M. & Froehlich, D. E. (2018). Homophilie, Diversity und Feedback: eine soziale Netzwerkanalyse. In: Barbara Covarrubias Venegas, Katharina Thill und Julia Domnanovich (Hg.): Personalmanagement. Internationale Perspektiven und Implikationen für die Praxis. (S. 179–192). Wiesbaden: Springer Gabler.
+
+Fuhse, J. A. (2018). Soziale Netzwerke: Konzepte und Forschungsmethoden (2.Aufl.). Konstanz: UVK Verlagsgemeinschaft.
+
+Gies, Miep (2001). Meine Zeit mit Anne Frank. Bern und München: Scherz Verlag.
+
+Granovetter, M. S. (1977). The Strenght of Weak Ties. In: S. Leinhardt (Hg.): Social Networks. (S. 347-367). Pittsburgh, Pennsylania: Academic Press.
+
+Hollstein, B. & Straus, B. (2006). Qualitative Netzwerkanalyse: Konzepte, Methoden, Anwendungen. Wiesbaden: Springer VS.
+
+Institut für interdisziplinäre Konflikt- und Gewaltforschung (2019). Multidimensionaler Erinnerungs Monitor. Abgerufen am 16.06, von https://www.stiftung-evz.de/fileadmin/user_upload/EVZ_Uploads/Stiftung/Publikationen/EVZ_Studie_MEMO_2019_final.pdf
+
+Jansen, D. (2003). Einführung in die Netzwerkanalyse: Grundlagen, Methoden, Forschungsbeispiele (2., erw. Aufl). Opladen: Leske + Budrich.
+
+Keyserlingk-Rehbein, L. (2018). Nur eine »ganz kleine Clique«?: Die NS-Ermittlungen über das Netzwerk vom 20. Juli 1944. Berlin: Lukas Verlag für Kunst- und Geistesgeschichte.
+
+Müller, M. (2020). Das Mädchen Anne Frank: Die Biographie (3. Aufl.). Frankfurt am Main: S. Fischer Verlag.
+
+Pressler, Mirjam (2019). Ich sehne mich so - Die Lebensgeschichte der Anne Frank. Weinheim: Gulliver von Bertz-Verlag.
+
+Pressler, M. (2009). »Grüße und Küsse an alle«: Die Geschichte der Familie von Anne Frank (2. Aufl.). Frankfurt am Main: S. Fischer Verlag.
+
+Recke, T. (2011). Netzwerke als Ansatz zur Bestimmung der Repositionierungsintensität von Marken. In: Tobias Recke (Hg.): Die Bestimmung der Repositionierungsintensität von Marken. Ein entscheidungsunterstützendes Modell auf Basis von semantischen Netzen. (S. 30–251). Wiesbaden: Gabler Verlag.
+
+Rol, R. van der, & Verhoeven, R. (1993). Anne Frank (9., Aufl.; M. Pressler, Übers.). Hamburg: Oetinger Verlag. (Originalwerk veröffentlicht 1992).
+
+Seibel, W., & Raab, J. (2003). Verfolgungsnetzwerke: Zur Messung von Arbeitsteilung und Machtdifferenzierung in den Verfolgungsapparaten des Holocaust. KZfSS Kölner Zeitschrift für Soziologie und Sozialpsychologie, 55(2), 197–230. https://doi.org/10.1007/s11577-003-0048-y
+
+Stegbauer, C. (Hrsg.). (2008). Netzwerkanalyse und Netzwerktheorie: Ein neues 
+Paradigma in den Sozialwissenschaften. Wiesbaden: Springer VS.
+
+Talas, A. (Regisseurin), &  Nasht, S. (Drehbuch). (2008). Connected: 
+The Power of Six Degrees. Australia.
+
+Wolf, D. L. (2007). Beyond Anne Frank: Hidden children and postwar families in Holland.
+Berkeley: University of California Press.
+
+Zapruder, A. (o. J.). Holocaust-Tagebücher von Anne Frank und anderen jungen Menschen, Abgerufen am am 14. Juni 2020, von der Anne Frank Haus Webseite:  https://www.annefrank.org/de/anne-frank/vertiefung/holocaust-tagebucher-von-anne-frank-und-and/
+
